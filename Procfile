@@ -1,1 +1,1 @@
-web: gunicorn the_paper_lounge.wsgi
+web: gunicorn thepaperlounge.wsgi
