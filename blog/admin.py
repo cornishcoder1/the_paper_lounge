@@ -11,7 +11,6 @@ class ReviewAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on', 'approved')
     search_fields = ('title', 'content')
     summernote_fields = ('content') # Tells Django what fields we want to use Summernote with
-    readonly_fields = ('slug',)
     actions = ['approve_review']
 
     def approve_review(self, request, queryset):
