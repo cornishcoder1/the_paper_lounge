@@ -186,7 +186,7 @@ In Gitpod:
 
 
 ## Media
-
+1. Bookshelf icon by <a href="https://www.freepik.com" title="Freepik">Freepik</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
 
 # Acknowledgements
