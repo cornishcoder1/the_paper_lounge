@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+{% load static%}
 
 <div class="masthead">
     <div class="container">
@@ -12,7 +13,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in review.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="{% static 'images/placeholder.jpg' %}" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}

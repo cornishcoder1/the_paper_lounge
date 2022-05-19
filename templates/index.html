@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <div class="container-fluid">
@@ -15,7 +15,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in review.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="{% static 'images/placeholder.jpg' %}">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ review.featured_image.url }}">
                                 {% endif %}
