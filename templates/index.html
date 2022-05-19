@@ -22,7 +22,7 @@
                                 <div class="image-flash">
                                     <p class="author">Reviewer: {{ review.creator }}</p>
                                 </div>
-                                <a href="#" class="post-link">
+                                <a href="{% url 'review_detail' review.slug %}" class="post-link">
                                     <h2 class="card-title">{{ review.title }}</h2>
                                     <p class="card-text">{{ review.excerpt }}</p>
                                 </a>

@@ -37,7 +37,7 @@ class Review(models.Model):
 
     def number_of_likes(self):
         """
-        See number of likes on a recipe.
+        See number of likes on a review.
         """
         return self.likes.count()
 
