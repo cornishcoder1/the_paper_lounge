@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Review
 from .forms import CommentForm
+from django.contrib import messages
 
 class ReviewList(generic.ListView):
     model = Review
@@ -49,7 +50,7 @@ class ReviewDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = review
             comment.save()
-
+            messages.success(request, 'Success! Your comment has been submitted for approval.')
         else: 
             comment_form = CommentForm()
         
