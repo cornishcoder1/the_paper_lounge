@@ -3,3 +3,16 @@
 body {
     font-family: 'Inconsolata', sans-serif;  
 }
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
