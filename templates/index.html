@@ -5,6 +5,20 @@
 <div class="container-fluid">
     <div class="row">
 
+        <!--Add a review-->
+        {% if user.is_authenticated %}
+        <div class="row">
+            <div class="col-2 mx-auto text-center mt-5">
+                <div class="btn d-inline-block main-btn">
+                    <a href="">Add Review  <i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p class="text-center mt-5"><a href="{% url 'account_login' %}" class="sign-in-prompt">Login</a> to add a post.</p>
+        <p class="text-center mt-5"><a href="{% url 'account_signup' %}" class="sign-in-prompt">Create an account</a></p>
+        {% endif %}
+
         <!-- Review entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">

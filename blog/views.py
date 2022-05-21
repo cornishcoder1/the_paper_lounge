@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Review
-from .forms import CommentForm
+from .forms import CommentForm, ReviewForm
 from django.contrib import messages
 
 class ReviewList(generic.ListView):
@@ -70,7 +70,7 @@ class ReviewDetail(View):
 class ReviewLike(View):
 
     def post(self, request, slug):
-        review = get_object_or_404(Review, slug=slug)
+        review = get_object_or_404(Review)
 
         if review.likes.filter(id=request.user.id).exists():
             review.likes.remove(request.user)
@@ -79,4 +79,5 @@ class ReviewLike(View):
         
         return HttpResponseRedirect(reverse('review_detail', args=[slug]))
 
-         
+
+##class AddReview(View):
