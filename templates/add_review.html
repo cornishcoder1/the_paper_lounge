@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load cloudinary %}
-{% load active_link_tags %}
 {% load crispy_forms_tags %}
 {% load static %}
 
@@ -12,6 +11,7 @@
 {% block content %}
     <h1>Create your review here</h1>
     <br/><br/>
+
     <form action="" method="POST">
         {% csrf_token %}
 

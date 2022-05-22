@@ -7,17 +7,8 @@ from django.contrib import messages
 
 
 def add_review(request):
-    submitted = False
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/add_review?submitted=True')
-        else:
-            form = ReviewForm
-            if 'submitted' in request.GET:
-                submitted = True
-    return render(request, 'add_review.html', {'form': form, 'submitted': submitted})
+             
+    return render(request, 'add_review.html', {})
 
 
 class ReviewList(generic.ListView):
