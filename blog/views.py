@@ -5,6 +5,21 @@ from .models import Review
 from .forms import CommentForm, ReviewForm
 from django.contrib import messages
 
+
+def add_review(request):
+    submitted = False
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/add_review?submitted=True')
+        else:
+            form = ReviewForm
+            if 'submitted' in request.GET:
+                submitted = True
+    return render(request, 'add_review.html', {'form': form, 'submitted': submitted})
+
+
 class ReviewList(generic.ListView):
     model = Review
     queryset = Review.objects.filter(status=1).order_by('-created_on')
@@ -78,6 +93,3 @@ class ReviewLike(View):
             review.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('review_detail', args=[slug]))
-
-
-##class AddReview(View):
