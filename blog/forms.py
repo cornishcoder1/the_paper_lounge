@@ -9,6 +9,11 @@ class CommentForm(forms.ModelForm):
 
 
 class ReviewForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['genre'].required = True
+        
     class Meta:
         model = Review
         fields = (

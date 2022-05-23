@@ -5,7 +5,9 @@ from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
-GENRES = ((0, 'Thriller'), (1, 'Crime'), (2, 'Romance'))
+GENRES = ((0, 'Crime'), (1, 'Fantasy'), (2, 'Horror'), (4, 'Kids'),
+          (5, 'Mystery'), (6, 'Romance'), (7, 'Science-Fiction'), (8, 'Teen'),
+          (9, 'Thriller'), (10, 'Other'))
 
 
 class Review(models.Model):
@@ -17,10 +19,10 @@ class Review(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_posts")
     updated_on = models.DateTimeField(auto_now=True)
     rating = models.IntegerField(choices=RATING, default=0)
+    genre = models.IntegerField(choices=GENRES, blank=True, null=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     author = models.CharField(max_length=200)
-    genre = models.IntegerField(choices=GENRES, blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)
