@@ -198,5 +198,6 @@ In Gitpod:
 
 
 # Acknowledgements
-- Ed B_alum for helping me fix a 404 error. 
-- <a href="https://stackoverflow.com/questions/38963193/auto-populate-slug-field-django">Stack Overflow</a> for a solution on how to auto-populate the Review model slugfield.
+1. Ed B_alum for helping me fix a 404 error. 
+2. Stack Overflow - <a href="https://stackoverflow.com/questions/38963193/auto-populate-slug-field-django"> how to auto-populate the Review model slugfield.</a>
+3. Stack Overflow - <a href="https://stackoverflow.com/questions/7682804/django-model-forms-setting-a-required-field"> how to set a required field on a Django model form.</a>
