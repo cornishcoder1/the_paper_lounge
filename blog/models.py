@@ -18,7 +18,7 @@ class Review(models.Model):
     rating = models.IntegerField(choices=RATING, default=0)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
-    excerpt = models.TextField(blank=True)
+    author = models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)

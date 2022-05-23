@@ -13,6 +13,7 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = (
             'title',
+            'author',
             'rating',
             'content',
             'featured_image',
