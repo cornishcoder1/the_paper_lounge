@@ -5,7 +5,7 @@ from django.urls import path
 urlpatterns = [
     path('', views.ReviewList.as_view(), name='home'),
     path('add-review/', views.add_review, name='add_review'),
-    path('<slug:slug>/', views.ReviewDetail.as_view(), name='review_detail'),
+    path('reviews/<slug:slug>/', views.ReviewDetail.as_view(), name='review_detail'),
     path('like/<slug:slug>)', views.ReviewLike.as_view(), name='review_like'),
     
 ]

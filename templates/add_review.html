@@ -11,12 +11,61 @@
 {% block content %}
     <h1>Create your review here</h1>
     <br/><br/>
-
-    <form action="" method="POST">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-
-        <input type="submit" value="submit" class="btn btn-secondary">
-    </form>
+    {% if submitted %}
+        <h1>Your review was submitted for approval succesfully</h1>
+    {% else %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                {{ review_form | crispy }}
+            </div>
+            <input type="submit" value="submit" class="btn btn-secondary">
+        </form>
+    {% endif %}
+   
 {% endblock %}
+
+
+
+
+
+<!-- <form action="." method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col">
+            {% csrf_token %}
+            <div class="row">
+                {{ recipe_form.title | as_crispy_field | safe }}
+            </div>
+            <div class="row">
+                {{ recipe_form.excerpt | as_crispy_field | safe }}
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    {{ recipe_form.prep_time|as_crispy_field | safe }}
+                </div>
+                <div class="col-6">
+                    {{ recipe_form.difficulty|as_crispy_field | safe }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    {{ recipe_form.serves|as_crispy_field | safe }}
+                </div>
+                <div class="col-6">
+                    {{ recipe_form.cook_time|as_crispy_field | safe }}
+                </div>
+            </div>
+            <div class="row">
+                {{ recipe_form.ingredients|as_crispy_field | safe }}
+            </div>
+            <div class="row">
+                {{ recipe_form.method|as_crispy_field | safe }}
+            </div>
+            <div class="row">
+                {{ recipe_form.featured_image|as_crispy_field | safe }}
+                <p>A default image will be used if you do not provide one.</p>
+            </div>
+            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </div>
+    </div>
+</form> -->

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
@@ -23,6 +24,10 @@ class Review(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Review, self).save(*args, **kwargs)
+
     class meta:
         """
         Order the reviews in descending order.
@@ -41,23 +46,23 @@ class Review(models.Model):
         """
         return self.likes.count()
 
-    def can_edit(self, request, slug):
-        """
-        Allows creator to edit review.
-        """
-        if self.creator:
-            return True
-        else:
-            return False
+    # def can_edit(self, request, slug):
+    #     """
+    #     Allows creator to edit review.
+    #     """
+    #     if self.creator:
+    #         return True
+    #     else:
+    #         return False
 
-    def can_delete(self, request, slug):
-        """
-        Allows author to delete review.
-        """
-        if self.creator:
-            return True
-        else:
-            return False
+    # def can_delete(self, request, slug):
+    #     """
+    #     Allows author to delete review.
+    #     """
+    #     if self.creator:
+    #         return True
+    #     else:
+    #         return False
 
 
 class Comment(models.Model):

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Review
 from .forms import CommentForm, ReviewForm
@@ -7,8 +8,22 @@ from django.contrib import messages
 
 
 def add_review(request):
-             
-    return render(request, 'add_review.html', {})
+    submitted = False
+    if request.method == "POST":
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            review_form.instance.creator = request.user
+            review_form.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your review has been submitted for approval')
+            #return HttpResponseRedirect('add_review?submitted=True')
+            return redirect('home')
+    else:
+        review_form = ReviewForm
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'add_review.html', {'review_form': review_form, 'submitted': submitted})
+    
 
 
 class ReviewList(generic.ListView):
