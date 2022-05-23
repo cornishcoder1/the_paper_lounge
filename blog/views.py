@@ -16,7 +16,6 @@ def add_review(request):
             review_form.save()
             messages.add_message(request, messages.SUCCESS,
                                  'Your review has been submitted for approval')
-            #return HttpResponseRedirect('add_review?submitted=True')
             return redirect('home')
     else:
         review_form = ReviewForm

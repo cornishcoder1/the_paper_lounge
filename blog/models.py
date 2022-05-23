@@ -24,6 +24,7 @@ class Review(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
 
+    # Save method sourced from Stack Overflow-
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Review, self).save(*args, **kwargs)

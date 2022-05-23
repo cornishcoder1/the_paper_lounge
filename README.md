@@ -69,7 +69,7 @@
     - Upon attempting to like a review, I was taken to an error page which stated that 'reverse' was an undefined variable. Upon checking the views.py file, I realised that I had forgotten to import the 'reverse' django shortcut. Once I had added the import to the top of the file (line 1), I was able to like a review without error. 
 
 - add_review.html not found (404 error)
-    - When defining the URL path for this page in blog.urls.py and attempting to render, I was presented with a 404 error. This was because ‘add-review’ was being treated as the slug expected by the review_detail view. I changed the order of the paths, placing the 'add_review' path above the 'ReviewDetail' path in the URL patterns list. This fixed the problem and allowed the page to render.  
+    - When defining the URL path for this page in blog.urls.py and attempting to render, I was presented with a 404 error. This was because ‘add-review’ was being treated as the slug expected by the review_detail view. I changed the order of the paths, placing the 'add_review' path above the 'ReviewDetail' path in the URL patterns list. This fixed the problem and allowed the page to render.
 
 ## Unfixed
 
@@ -199,3 +199,4 @@ In Gitpod:
 
 # Acknowledgements
 - Ed B_alum for helping me fix a 404 error. 
+- <a href="https://stackoverflow.com/questions/38963193/auto-populate-slug-field-django">Stack Overflow</a> for a solution on how to auto-populate the Review model slugfield.

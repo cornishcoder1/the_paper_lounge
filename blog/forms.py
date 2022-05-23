@@ -18,3 +18,16 @@ class ReviewForm(forms.ModelForm):
             'content',
             'featured_image',
         )
+
+        labels = {
+            'title': 'Book Title',
+            'author': 'Book Author',
+            'content': 'Write your review here',
+            'featured_image': 'cover image',
+        }
+
+        # widgets = {
+        #     'title': forms.TextInput(attrs={'class' 'form-control'}),
+        #     'author': forms.TextInput(attrs={'class' 'form-control'}),
+        #     'content': forms.TextInput(attrs={'class' 'form-control'}),
+        # }
