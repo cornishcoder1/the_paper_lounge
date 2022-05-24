@@ -52,23 +52,23 @@ class Review(models.Model):
         """
         return self.likes.count()
 
-    # def can_edit(self, request, slug):
-    #     """
-    #     Allows creator to edit review.
-    #     """
-    #     if self.creator:
-    #         return True
-    #     else:
-    #         return False
+    def can_edit(self, request, slug):
+        """
+        Allows creator to edit review.
+        """
+        if self.creator:
+            return True
+        else:
+            return False
 
-    # def can_delete(self, request, slug):
-    #     """
-    #     Allows author to delete review.
-    #     """
-    #     if self.creator:
-    #         return True
-    #     else:
-    #         return False
+    def can_delete(self, request, slug):
+        """
+        Allows creator to delete review.
+        """
+        if self.creator:
+            return True
+        else:
+            return False
 
 
 class Comment(models.Model):

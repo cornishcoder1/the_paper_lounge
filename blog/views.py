@@ -21,6 +21,41 @@ def add_review(request):
         if 'submitted' in request.GET:
             submitted = True
     return render(request, 'add_review.html', {'review_form': review_form, 'submitted': submitted})
+
+
+
+
+
+
+def edit_review(request, slug):
+    """
+    Review update/edit view
+    """
+    review = get_object_or_404(Review, slug=slug)
+    review_form = ReviewForm(request.POST or None, instance=review)
+    context = {
+        "review_form": review_form,
+        "review": review
+    }
+    if request.method == "POST":
+        review_form = ReviewForm(request.POST, request.FILES, instance=review)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.creator = request.user
+            review.save()
+            return redirect('home')
+    else:
+        review_form = ReviewForm(instance=review)
+    return render(request, "edit_review.html", context)
+
+
+def delete_review(request, slug):
+    """
+    Review delete view
+    """
+    review = Review.objects.get(slug=slug)
+    review.delete()
+    return redirect('home')
     
 
 

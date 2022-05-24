@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block title %}
+<title>Edit Your Review Here</title>
+{% endblock %}
+
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                {{ review_form | crispy }}
+            </div>
+            <input type="submit" value="submit" class="btn btn-secondary">
+        </form>
+    { % else % }
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3 mb-5 text-light text-center">
+                <h1 class="mb-5">You are not logged in!</h1>
+                <p>Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> an account to edit a recipe.</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
