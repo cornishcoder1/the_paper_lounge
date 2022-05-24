@@ -14,7 +14,7 @@
     {% if submitted %}
         <h1>Your review was submitted for approval succesfully</h1>
     {% else %}
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="row">
                 {{ review_form | crispy }}

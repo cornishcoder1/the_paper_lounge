@@ -9,7 +9,7 @@ from django.contrib import messages
 def add_review(request):
     submitted = False
     if request.method == "POST":
-        review_form = ReviewForm(request.POST)
+        review_form = ReviewForm(request.POST, request.FILES)
         if review_form.is_valid():
             review_form.instance.creator = request.user
             review_form.save()
@@ -50,7 +50,7 @@ class ReviewDetail(View):
                 "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
-            }
+            },
         )
         
     def post(self, request, slug, *args, **kwargs):
@@ -89,7 +89,7 @@ class ReviewDetail(View):
 class ReviewLike(View):
 
     def post(self, request, slug):
-        review = get_object_or_404(Review)
+        review = get_object_or_404(Review, slug=slug)
 
         if review.likes.filter(id=request.user.id).exists():
             review.likes.remove(request.user)

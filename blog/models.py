@@ -24,7 +24,7 @@ class Review(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     author = models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
 
@@ -44,6 +44,7 @@ class Review(models.Model):
         Returns a string showing the title.
         """
         return self.title
+        
 
     def number_of_likes(self):
         """
