@@ -1,13 +1,13 @@
-from .models import Comment, Review, Genre
+from .models import Comment, Review
 from django import forms
 
 # genres = [('crime', 'crime'), ('thriller', 'thriller')]
-genres = Genre.objects.all().values_list('name', 'name')
+# genres = Genre.objects.all().values_list('name', 'name')
 
-genre_list = []
+# genre_list = []
 
-for genre in genres:
-    genre_list.append(genre)
+# for genre in genres:
+#     genre_list.append(genre)
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -40,6 +40,6 @@ class ReviewForm(forms.ModelForm):
             'featured_image': 'cover image',
         }
 
-        widgets = {
-            'genre': forms.Select(choices=genre_list, attrs={'class': 'form-control'}),
-        }
+        # widgets = {
+        #     'genre': forms.Select(choices=genre_list, attrs={'class': 'form-control'}),
+        # }

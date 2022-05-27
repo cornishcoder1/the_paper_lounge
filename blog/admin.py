@@ -3,24 +3,6 @@ from .models import Review, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-<<<<<<< HEAD
-# @admin.register(Genre)
-# class TopicAdmin(admin.ModelAdmin):
-#     """Admin view for Genres"""
-#     list_display = ('name', 'description')
-#     search_fields = ('name', 'description')
-=======
-@admin.register(Genre)
-class GenreAdmin(admin.ModelAdmin):
-    """Admin view for Genres"""
-    list_display = [
-        'name'
-    ]
-    search_fields = [
-        'name'
-    ]
->>>>>>> 687bec60c76fc3e1c5092632bd83dbdca4b14517
-
 
 @admin.register(Review)
 class ReviewAdmin(SummernoteModelAdmin):
