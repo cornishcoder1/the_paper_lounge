@@ -36,7 +36,6 @@
                                 <img class="card-img-top" src=" {{ review.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Genre: {{ review.genre }}</p>
                                     <p class="author">Reviewer: {{ review.creator }}</p>
                                 </div>
                                 <a href="{% url 'review_detail' review.slug %}" class="post-link">
