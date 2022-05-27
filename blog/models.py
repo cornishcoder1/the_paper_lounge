@@ -10,13 +10,13 @@ GENRES = ((0, 'Crime'), (1, 'Fantasy'), (2, 'Horror'), (4, 'Kids'),
           (9, 'Thriller'), (10, 'Other'))
           
 
-class Genre (models.Model):
-    """Schema for the Genre model"""
-    name = models.CharField(max_length=150, unique=True)
-    description = models.TextField()
+# class Genre (models.Model):
+#     """Schema for the Genre model"""
+#     name = models.CharField(max_length=150, unique=True)
+#     description = models.TextField()
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 
 
