@@ -10,7 +10,7 @@ class CommentForm(forms.ModelForm):
 
 class ReviewForm(forms.ModelForm):
 
-    # Sets a required field on a Django model form (README Acknowledgement no.3)
+    #Sets a required field on a Django model form (README Acknowledgement no.3)
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['genre'].required = True

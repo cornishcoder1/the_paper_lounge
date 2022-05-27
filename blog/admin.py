@@ -1,17 +1,17 @@
 from django.contrib import admin
-from .models import Review, Comment, Genre
+from .models import Review, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(Genre)
-class TopicAdmin(admin.ModelAdmin):
-    """Admin view for Genres"""
-    list_display = [
-        'name',
-    ]
-    search_fields = [
-        'name',
-    ]
+# @admin.register(Genre)
+# class TopicAdmin(admin.ModelAdmin):
+#     """Admin view for Genres"""
+#     list_display = [
+#         'name',
+#     ]
+#     search_fields = [
+#         'name',
+#     ]
 
 
 @admin.register(Review)

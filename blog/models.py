@@ -8,16 +8,6 @@ RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
 GENRES = ((0, 'Crime'), (1, 'Fantasy'), (2, 'Horror'), (4, 'Kids'),
           (5, 'Mystery'), (6, 'Romance'), (7, 'Science-Fiction'), (8, 'Teen'),
           (9, 'Thriller'), (10, 'Other'))
-          
-
-class Genre (models.Model):
-    """Schema for the Genre model"""
-    name = models.CharField(max_length=150, unique=True)
-
-    def __str__(self):
-        return self.name
-
-
 
 
 class Review(models.Model):
