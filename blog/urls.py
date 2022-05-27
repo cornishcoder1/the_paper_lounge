@@ -1,4 +1,5 @@
 from . import views
+from . views import GenreView
 from django.urls import path
 
 
@@ -10,5 +11,5 @@ urlpatterns = [
          name='delete_review'),
     path('reviews/<slug:slug>/', views.ReviewDetail.as_view(), name='review_detail'),
     path('like/<slug:slug>)', views.ReviewLike.as_view(), name='review_like'),
-    
+    path('genre/<str:genres>/', GenreView, name='genre'),
 ]

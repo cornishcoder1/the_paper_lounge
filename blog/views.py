@@ -6,6 +6,11 @@ from .forms import CommentForm, ReviewForm
 from django.contrib import messages
 
 
+def GenreView(request, genres):
+    genre_reviews = Review.objects.filter(genre=genres)
+    return render(request, 'genres.html', {'genres': genres, 'genre_reviews': genre_reviews})
+
+
 def add_review(request):
     submitted = False
     if request.method == "POST":

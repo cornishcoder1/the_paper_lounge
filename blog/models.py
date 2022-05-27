@@ -30,7 +30,7 @@ class Review(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_posts")
     updated_on = models.DateTimeField(auto_now=True)
     rating = models.IntegerField(choices=RATING, default=0)
-    genre = models.CharField(max_length=200, default='crime')
+    genre = models.CharField(max_length=200, default='please select a genre')
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     author = models.CharField(max_length=200)
