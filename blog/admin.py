@@ -6,8 +6,12 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Genre)
 class TopicAdmin(admin.ModelAdmin):
     """Admin view for Genres"""
-    list_display = ('name', 'description')
-    search_fields = ('name', 'description')
+    list_display = [
+        'name',
+    ]
+    search_fields = [
+        'name',
+    ]
 
 
 @admin.register(Review)
