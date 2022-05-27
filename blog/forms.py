@@ -1,6 +1,13 @@
-from .models import Comment, Review
+from .models import Comment, Review, Genre
 from django import forms
 
+# genres = [('crime', 'crime'), ('thriller', 'thriller')]
+genres = Genre.objects.all().values_list('name', 'name')
+
+genre_list = []
+
+for genre in genres:
+    genre_list.append(genre)
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -11,9 +18,9 @@ class CommentForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
 
     #Sets a required field on a Django model form (README Acknowledgement no.3)
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['genre'].required = True
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['genre'].required = True
 
     class Meta:
         model = Review
@@ -33,8 +40,6 @@ class ReviewForm(forms.ModelForm):
             'featured_image': 'cover image',
         }
 
-        # widgets = {
-        #     'title': forms.TextInput(attrs={'class' 'form-control'}),
-        #     'author': forms.TextInput(attrs={'class' 'form-control'}),
-        #     'content': forms.TextInput(attrs={'class' 'form-control'}),
-        # }
+        widgets = {
+            'genre': forms.Select(choices=genre_list, attrs={'class': 'form-control'}),
+        }

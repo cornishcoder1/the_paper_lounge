@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from cloudinary.models import CloudinaryField
 from django.utils.text import slugify
 
@@ -8,6 +9,16 @@ RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
 GENRES = ((0, 'Crime'), (1, 'Fantasy'), (2, 'Horror'), (4, 'Kids'),
           (5, 'Mystery'), (6, 'Romance'), (7, 'Science-Fiction'), (8, 'Teen'),
           (9, 'Thriller'), (10, 'Other'))
+
+
+class Genre(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 class Review(models.Model):
@@ -19,7 +30,7 @@ class Review(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_posts")
     updated_on = models.DateTimeField(auto_now=True)
     rating = models.IntegerField(choices=RATING, default=0)
-    genre = models.IntegerField(choices=GENRES, blank=True, null=True)
+    genre = models.CharField(max_length=200, default='crime')
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     author = models.CharField(max_length=200)
