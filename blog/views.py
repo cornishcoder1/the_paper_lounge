@@ -23,10 +23,6 @@ def add_review(request):
     return render(request, 'add_review.html', {'review_form': review_form, 'submitted': submitted})
 
 
-
-
-
-
 def edit_review(request, slug):
     """
     Review update/edit view
