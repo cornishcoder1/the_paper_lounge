@@ -22,7 +22,7 @@ class Review(models.Model):
     Model for review
     """
     title = models.CharField(max_length=200, unique=True)
-    genre = models.ForeignKey(Genre, on_delete=models.PROTECT, default=1)
+    genre = models.ForeignKey(Genre, on_delete=models.PROTECT, blank=True, null=True)
     slug = models.SlugField(max_length=150, unique=True)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_posts")
     updated_on = models.DateTimeField(auto_now=True)
