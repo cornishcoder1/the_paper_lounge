@@ -18,8 +18,7 @@ def add_review(request):
         if review_form.is_valid():
             review_form.instance.creator = request.user
             review_form.save()
-            messages.add_message(request, messages.SUCCESS,
-                                 'Your review has been submitted for approval')
+            messages.success(request, 'Success! Your review has been submitted for approval.')
             return redirect('home')
     else:
         review_form = ReviewForm

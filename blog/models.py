@@ -35,7 +35,7 @@ class Review(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     author = models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=True)
+    approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
 
@@ -88,7 +88,6 @@ class Comment(models.Model):
     """
     post = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
-    
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
