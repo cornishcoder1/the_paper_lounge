@@ -1,14 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Review, Genre
 from .forms import CommentForm, ReviewForm
-from django.contrib import messages
-
-
-# def GenreView(request, genres):
-#     genre_reviews = Review.objects.filter(genre=genres)
-#     return render(request, 'genres.html', {'genres': genres, 'genre_reviews': genre_reviews})
 
 
 def add_review(request):
@@ -56,7 +51,7 @@ def delete_review(request, slug):
     review = Review.objects.get(slug=slug)
     review.delete()
     return redirect('home')
-    
+
 
 class ReviewList(generic.ListView):
     model = Review
