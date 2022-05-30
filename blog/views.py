@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Review
+from .models import Review, Genre
 from .forms import CommentForm, ReviewForm
 from django.contrib import messages
 
 
-def GenreView(request, genres):
-    genre_reviews = Review.objects.filter(genre=genres)
-    return render(request, 'genres.html', {'genres': genres, 'genre_reviews': genre_reviews})
+# def GenreView(request, genres):
+#     genre_reviews = Review.objects.filter(genre=genres)
+#     return render(request, 'genres.html', {'genres': genres, 'genre_reviews': genre_reviews})
 
 
 def add_review(request):
@@ -58,13 +58,33 @@ def delete_review(request, slug):
     return redirect('home')
     
 
-
 class ReviewList(generic.ListView):
     model = Review
     queryset = Review.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
-    
+
+
+class GenreReviewList(generic.ListView):
+    template_name = 'genres.html'
+    context_object_name = 'genlist'
+
+    def get_queryset(self):
+        content = {
+            'gen': self.kwargs['genre'],
+            'reviews': Review.objects.filter(genre__name=self.kwargs['genre'])
+            .filter(status=1)
+        }
+        return content
+
+
+def genre_list(request):
+    genre_list = Genre.objects.exclude(name='default')
+    context = {
+        'genre_list': genre_list,
+    }
+    return context
+
 
 class ReviewDetail(View):
 
@@ -130,5 +150,5 @@ class ReviewLike(View):
             review.likes.remove(request.user)
         else:
             review.likes.add(request.user)
-        
+      
         return HttpResponseRedirect(reverse('review_detail', args=[slug]))

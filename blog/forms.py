@@ -18,16 +18,16 @@ class CommentForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
 
     # Sets a required field on a Django model form (README Acknowledgement no.3)
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['genre'].required = True
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['genre'].required = True
 
     class Meta:
         model = Review
         fields = (
             'title',
             'author',
-            'genre',
+            # 'genre',
             'rating',
             'content',
             'featured_image',

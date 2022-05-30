@@ -5,20 +5,16 @@ from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
-GENRES = ((0, 'Crime'), (1, 'Fantasy'), (2, 'Horror'), (4, 'Kids'),
-          (5, 'Mystery'), (6, 'Romance'), (7, 'Science-Fiction'), (8, 'Teen'),
-          (9, 'Thriller'), (10, 'Other'))
-          
-
-# class Genre (models.Model):
-#     """Schema for the Genre model"""
-#     name = models.CharField(max_length=150, unique=True)
-#     description = models.TextField()
-
-#     def __str__(self):
-#         return self.name
+# GENRES = ((0, 'Crime'), (1, 'Fantasy'), (2, 'Horror'), (4, 'Kids'),
+        #   (5, 'Mystery'), (6, 'Romance'), (7, 'Science-Fiction'), (8, 'Teen'),
+        #   (9, 'Thriller'), (10, 'Other'))
+      
+class Genre(models.Model):
+    name = models.CharField(max_length=150)
 
 
+    def __str__(self):
+        return self.name
 
 
 class Review(models.Model):
@@ -26,11 +22,11 @@ class Review(models.Model):
     Model for review
     """
     title = models.CharField(max_length=200, unique=True)
+    genre = models.ForeignKey(Genre, on_delete=models.PROTECT, default=1)
     slug = models.SlugField(max_length=150, unique=True)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_posts")
     updated_on = models.DateTimeField(auto_now=True)
     rating = models.IntegerField(choices=RATING, default=0)
-    genre = models.IntegerField(choices=GENRES, blank=True, null=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     author = models.CharField(max_length=200)
