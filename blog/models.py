@@ -5,10 +5,8 @@ from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
-# GENRES = ((0, 'Crime'), (1, 'Fantasy'), (2, 'Horror'), (4, 'Kids'),
-        #   (5, 'Mystery'), (6, 'Romance'), (7, 'Science-Fiction'), (8, 'Teen'),
-        #   (9, 'Thriller'), (10, 'Other'))
-      
+
+     
 class Genre(models.Model):
     name = models.CharField(max_length=150)
 
@@ -35,7 +33,7 @@ class Review(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
 
-    # Save method sourced from Stack Overflow (README Acknowledgement no.2)
+    # Save method sourced from Stack Overflow (README code reference no.1)
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Review, self).save(*args, **kwargs)

@@ -70,9 +70,7 @@
 
 - add_review.html not found (404 error)
     - When defining the URL path for this page in blog.urls.py and attempting to render, I was presented with a 404 error. This was because ‘add-review’ was being treated as the slug expected by the review_detail view. I changed the order of the paths, placing the 'add_review' path above the 'ReviewDetail' path in the URL patterns list. This fixed the problem and allowed the page to render.
-
-- Uploaded images not coming through to admin panel (REMOVE)
-    - after uploading an image to the add review form, images were not coming through to the admin panel with the other review form fields for authorisation. The image was instead defaulting to the placeholder image. To fix this I set the boolean value of 'approved' to True in the Review model. Upon testing, reviews still went to admin to be manually published to the site, but any uploaded images were also captured and rendered back to the relevant pages.   
+   
 
 ## Unfixed
 
@@ -188,8 +186,12 @@ In Gitpod:
 
 
 
-# Credits 
+# References 
 
+## Code
+1. Stack Overflow - <a href="https://stackoverflow.com/questions/38963193/auto-populate-slug-field-django"> how to auto-populate the Review model slugfield.</a>
+2. Stack Overflow - <a href="https://stackoverflow.com/questions/7682804/django-model-forms-setting-a-required-field"> how to set a required field on a Django model form.</a>
+3. Very Academy - <a href="https://www.youtube.com/watch?v=S9-Bt1JgRjQ"> Learn Django - Building a Simple Blog Categories Feature</a>
 
 ## Content
 
@@ -201,6 +203,5 @@ In Gitpod:
 
 
 # Acknowledgements
-1. Ed B_alum for helping me fix a 404 error. 
-2. Stack Overflow - <a href="https://stackoverflow.com/questions/38963193/auto-populate-slug-field-django"> how to auto-populate the Review model slugfield.</a>
-3. Stack Overflow - <a href="https://stackoverflow.com/questions/7682804/django-model-forms-setting-a-required-field"> how to set a required field on a Django model form.</a>
+- Ed B_alum for helping me fix a 404 error. 
+- Franciska from Tutor Support for helping me get my navbar drop down working. 

@@ -60,6 +60,10 @@ class ReviewList(generic.ListView):
     paginate_by = 6
 
 
+# GenreReviewList and genre_list views based on code from 'Learn Django -
+# Building a Simple Blog Categories Feature' by Very Academy (README code
+# reference no.3)
+
 class GenreReviewList(generic.ListView):
     template_name = 'genres.html'
     context_object_name = 'genlist'
