@@ -42,7 +42,7 @@
                     </li>
                     <!-- Navbar dropdown item based on code from 'Learn Django - Building a
                     Simple Blog Categories Feature' by Very Academy (README code reference no.3) -->
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Genres
                         </a>
@@ -53,8 +53,7 @@
                             </a>
                           {% endfor %}
                         </div>
-                    </li>
-                
+                    </li> -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
