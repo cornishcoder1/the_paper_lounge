@@ -10,6 +10,8 @@ RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
 class Genre(models.Model):
     name = models.CharField(max_length=150)
 
+    class Meta:
+        ordering = ('name',)
 
     def __str__(self):
         return self.name
