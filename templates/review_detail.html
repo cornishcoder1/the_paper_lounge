@@ -20,6 +20,7 @@
                 {% if user.id == review.creator.id %}
                 <a href="{% url 'edit_review' review.slug %}" class="edit"><button class="btn btn-signup btn-md"
                         value="{{ review.slug }}" type="button">Edit</button></a>
+                        
                 <a href="{% url 'delete_review' review.slug %}" class="confirm-delete delete"><button class="btn btn-danger btn-md mx-4"
                         value="{{ review.slug }}" type="button">Delete</button></a>
                 {% endif %}

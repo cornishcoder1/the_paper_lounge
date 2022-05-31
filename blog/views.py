@@ -38,6 +38,7 @@ def edit_review(request, slug):
             review = review_form.save(commit=False)
             review.creator = request.user
             review.save()
+            messages.success(request, 'Your edited review has been updated.')
             return redirect('home')
     else:
         review_form = ReviewForm(instance=review)
@@ -50,6 +51,7 @@ def delete_review(request, slug):
     """
     review = Review.objects.get(slug=slug)
     review.delete()
+    messages.success(request, 'Your review has been deleted.')
     return redirect('home')
 
 
