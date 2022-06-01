@@ -18,13 +18,34 @@
 
             <div class="col mt-2 mb-3">
                 {% if user.id == review.creator.id %}
+                <!--Edit Button-->
                 <a href="{% url 'edit_review' review.slug %}" class="edit"><button class="btn btn-signup btn-md"
                         value="{{ review.slug }}" type="button">Edit</button></a>
-                        
-                <a href="{% url 'delete_review' review.slug %}" class="confirm-delete delete"><button class="btn btn-danger btn-md mx-4"
-                        value="{{ review.slug }}" type="button">Delete</button></a>
+                <!--Delete Button-->
+                <button class="btn btn-danger btn-md mx4" data-bs-toggle="modal"
+                data-bs-target="#deleteModal{{ review.id }}">Delete</button>
                 {% endif %}
             </div>        
+            <!--Modal-->
+            <div class="modal fade" id="deleteModal{{ review.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content delete-modal">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel">Delete</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete "{{ review.title }}"?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <a class="btn btn-danger" href="{% url 'delete_review' review.slug %}">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in review.featured_image.url %}

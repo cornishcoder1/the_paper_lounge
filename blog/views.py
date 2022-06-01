@@ -46,10 +46,7 @@ def edit_review(request, slug):
 
 
 def delete_review(request, slug):
-    """
-    Review delete view
-    """
-    review = Review.objects.get(slug=slug)
+    review = get_object_or_404(Review, slug=slug)
     review.delete()
     messages.success(request, 'Your review has been deleted.')
     return redirect('home')
