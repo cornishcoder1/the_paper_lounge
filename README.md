@@ -205,3 +205,4 @@ In Gitpod:
 # Acknowledgements
 - Ed B_alum for helping me fix a 404 error. 
 - Franciska from Tutor Support for helping me get my navbar drop down working. 
+- Lisa Tinmurth and John from Tutor Support for helping me with my delete modal code. 
