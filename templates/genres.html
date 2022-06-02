@@ -7,7 +7,6 @@ genlist
 
 
 {% block content %}
-{% if genlist.reviews %}
 <div class="container-fluid">
     <div class="row">
         <!--Browse reviews by genre-->
@@ -81,7 +80,4 @@ genlist
     </nav>
     {% endif %}
 </div>
-{% else %}
-<h4>Sorry, this page does not exist</h4>
-{% endif %}
 {% endblock %}
