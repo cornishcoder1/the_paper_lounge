@@ -201,6 +201,8 @@ In Gitpod:
 
 2. Placeholder image by <a href="https://www.pexels.com/@caio/" title="Caio">Caio</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
 
+3. About page image by <a href="https://www.pexels.com/@emrecan/" title="Emre Can Acer">Emre Can Acer</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
 
 # Acknowledgements
 - Ed B_alum for helping me fix a 404 error. 

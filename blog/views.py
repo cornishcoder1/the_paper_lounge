@@ -6,6 +6,13 @@ from .models import Review, Genre
 from .forms import CommentForm, ReviewForm
 
 
+def about(request):
+    """
+    renders about page
+    """
+    return render(request, "about.html")
+    
+
 def add_review(request):
     submitted = False
     if request.method == "POST":

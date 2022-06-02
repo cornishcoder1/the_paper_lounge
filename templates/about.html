@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+<!-- Page Title -->
+{% block title %}
+<title>The Paper Lounge - About</title>
+{% endblock %}
+
+
+{% block content %}
+<section class="main-content">
+  <div class="container">
+    <div class="about">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="about-img">
+            {% load static %}
+            <img class="img-fluid" src="{% static 'images/book_lounge.jpg' %}" alt="book lounge">
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="about-content ms-2">
+            <h2 class="lettuce-text">About Us</h2>
+            <p>The Paper Lounge was created by a small circle of like-minded book worms, who wanted to share their passion
+                for literature with the world. 
+
+            <p>We aim to create a sense of community with this platform, allowing book lovers to share their opinions and thoughts
+                on their latest reads, start conversations and perhaps even find your next all time favourite book!</p>
+
+            <p> So what are you waiting for? Click the link to register and get stuck in...</p>
+          </div>
+        </div>
+</section>
+
+{% endblock %}

@@ -24,7 +24,7 @@ class Contact(View):
         if contact_form.is_valid():
             contact_form.save()
             messages.add_message(request, messages.SUCCESS,
-                                 'Thanks for your message!')
+                                 'Thanks for your message! We will be in touch soon')
 
         else:
             contact_form = ContactForm()
