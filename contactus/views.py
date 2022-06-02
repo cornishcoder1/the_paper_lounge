@@ -28,10 +28,6 @@ class Contact(View):
 
         else:
             contact_form = ContactForm()
-            # messages.add_message(request, messages.WARNING,
-            #                      'Message not sent. Please see ' +
-            #                      '"Guidance on submitting messages."')
-
         return render(
             request,
             'contact.html',
