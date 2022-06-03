@@ -6,11 +6,18 @@ body {
 
 .nav-bg {
     background: #B4E4F1;
+    box-shadow: 0px 2px 5px #B4E4F1;
 }
 
 .navbar {
    font-size: larger;
   
+}
+
+#dropdownMenuButton {
+    opacity: none;
+    background: grey;
+
 }
 
 #hero-image {
@@ -24,8 +31,10 @@ body {
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
+    background-position: top;
     position: relative;
+
 }
 
 .btn-like {
