@@ -13,6 +13,20 @@ body {
   
 }
 
+#hero-image {
+
+    height: 50vh;
+    background: url('https://res.cloudinary.com/dexhos525/image/upload/v1654255430/bookshelf_muted_sixtnm.jpg') no-repeat center;
+    opacity: 0.5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 .btn-like {
     color: #E84610;
