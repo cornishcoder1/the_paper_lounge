@@ -4,6 +4,16 @@ body {
     font-family: 'Inconsolata', sans-serif;  
 }
 
+.nav-bg {
+    background: #B4E4F1;
+}
+
+.navbar {
+   font-size: larger;
+  
+}
+
+
 .btn-like {
     color: #E84610;
     border: none;

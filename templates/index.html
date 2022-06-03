@@ -7,68 +7,48 @@
 <div class="container-fluid">
     <div class="row">
         <!--Browse reviews by genre-->
-        <div class="row">
-            <div class="col-2 mx-auto text-center mt-5">
-                <div class="btn d-inline-block main-btn">
-                    <!-- Dropdown button item based on code from 'Learn Django - Building a
-                    Simple Blog Categories Feature' by Very Academy (README code reference no.3) -->
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Browse Reviews by Genre
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {% for genre in genre_list %}
-                            <a class="dropdown-item" href="/genre/{{genre.name}}">
-                            {{ genre.name|title }}
-                            </a>
-                          {% endfor %}
-                        </div>
-                      </div>        
-                </div>
-            </div>
-        </div>
+        {% include 'genre_dropdown.html' %}
         <!--Add a review-->
         {% if user.is_authenticated %}
-            <div class="row">
-                <div class="col-2 mx-auto text-center mt-5">
-                    <div class="btn d-inline-block main-btn">
-                        <a href="{% url 'add_review' %}">Add Review  <i class="fas fa-plus"></i></a>
-                    </div>
-                </div>
+        <div class="col-2 mx-auto text-center mt-5">
+            <div class="btn d-inline-block main-btn">
+                <a href="{% url 'add_review' %}">Add Review  <i class="fas fa-plus"></i></a>
             </div>
-        {% else %}
-            <p class="text-center mt-5"><a href="{% url 'account_login' %}" class="sign-in-prompt">Login</a> to add a review.</p>
-            <p class="text-center mt-5"><a href="{% url 'account_signup' %}" class="sign-in-prompt">Create an account</a></p>
-        {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <p class="text-center mt-5"><a href="{% url 'account_login' %}" class="sign-in-prompt">Login</a> to add a review.</p>
+    <p class="text-center mt-5"><a href="{% url 'account_signup' %}" class="sign-in-prompt">Create an account</a></p>
+    {% endif %}
 
-        <!-- Review entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-            {% for review in review_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in review.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="{% static 'images/placeholder.jpg' %}">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ review.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Reviewer: {{ review.creator }}</p>
-                                </div>
-                                <a href="{% url 'review_detail' review.slug %}" class="post-link">
-                                    <h2 class="card-title">{{ review.title }}</h2>
-                                    <p class="card-text">by {{ review.author }}</p>
-                                </a>
-                                <hr />
-                                <p class="card-text text-muted h6">{{ review.created_on}} <i class="far fa-heart"></i>
-                                    {{ review.number_of_likes }}</p>
+    <!-- Review entries Column -->
+    <div class="col-12 mt-3 left">
+        <div class="row">
+        {% for review in review_list %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if "placeholder" in review.featured_image.url %}
+                            <img class="card-img-top"
+                                src="{% static 'images/placeholder.jpg' %}">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ review.featured_image.url }}">
+                            {% endif %}
+                            <div class="image-flash">
+                                <p class="author">Reviewer: {{ review.creator }}</p>
                             </div>
+                            <a href="{% url 'review_detail' review.slug %}" class="post-link">
+                                <h2 class="card-title">{{ review.title }}</h2>
+                                <p class="card-text">by {{ review.author }}</p>
+                            </a>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ review.created_on}} <i class="far fa-heart"></i>
+                                {{ review.number_of_likes }}</p>
                         </div>
                     </div>
                 </div>
+            </div>
             {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">

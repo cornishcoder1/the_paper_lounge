@@ -21,7 +21,7 @@
 
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-expand{-sm|-md|-lg|-xl|-xxl} sticky-top nav-bg">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'images/bookshelf.png' %}" width="30" height="30" class="d-inline-block align-top" alt="shelf of colorful books">
@@ -36,18 +36,18 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item grow">
                         <a class="nav-link" aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
+                    <li class="nav-item grow">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
-                    <li class="nav-item">
+                    <li class="nav-item grow">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item grow">
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}

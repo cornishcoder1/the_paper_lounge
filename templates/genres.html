@@ -10,26 +10,7 @@ genlist
 <div class="container-fluid">
     <div class="row">
         <!--Browse reviews by genre-->
-        <div class="row">
-            <div class="col-2 mx-auto text-center mt-5">
-                <div class="btn d-inline-block main-btn">
-                    <!-- Dropdown button item based on code from 'Learn Django - Building a
-                    Simple Blog Categories Feature' by Very Academy (README code reference no.3) -->
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Browse Reviews by Genre
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {% for genre in genre_list %}
-                            <a class="dropdown-item" href="/genre/{{genre.name}}">
-                            {{ genre.name|title }}
-                            </a>
-                          {% endfor %}
-                        </div>
-                      </div>        
-                </div>
-            </div>
-        </div>
+        {% include 'genre_dropdown.html' %}
         <!-- Review entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
