@@ -6,22 +6,33 @@
 
 <header>
 <div id="hero-image" class="container-fluid hero-container">
-<div class="text-on-top">&nbsp;</div>
-    <div class="row text-on-top">
-        <!--Browse reviews by genre-->
-        {% include 'genre_dropdown.html' %}
-        <!--Add a review-->
-        {% if user.is_authenticated %}
-        <div class="col-2 mx-auto text-center mt-5">
-            <div class="btn d-inline-block main-btn">
-                <a href="{% url 'add_review' %}">Add Review  <i class="fas fa-plus"></i></a>
-            </div>
-        </div>
-    </div>
-    {% else %}
-    <p class="text-center mt-5"><a href="{% url 'account_login' %}" class="sign-in-prompt">Login</a> to add a review.</p>
-    <p class="text-center mt-5"><a href="{% url 'account_signup' %}" class="sign-in-prompt">Create an account</a></p>
-    {% endif %}
+   <div class="col-12" id="hero-text-container">
+       <div class="text-center text-white header-text">
+            <h1 class="text-center page-title">Welcome to The Paper Lounge</h1>
+            <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or register an account to start submitting your own</p>
+            <!-- <div class="row text-on-top"> -->
+                <!--Browse reviews by genre-->
+                {% include 'genre_dropdown.html' %}
+                <!--Add a review-->
+                {% if user.is_authenticated %}
+                <div class="col-2 mx-auto text-center mt-5">
+                    <div class="btn d-inline-block main-btn">
+                        <a class="btn btn-success register-button" href="{% url 'add_review' %}"
+                      role="button">Add review here +</a>
+                    </div>
+                </div>
+                {% else %}
+                <!--Shows Sign Up and Log In buttons if user is not logged in-->
+                <div id="hero-buttons">
+                  <a class="btn btn-success register-button" href="{% url 'account_signup' %}"
+                      role="button">Register</a>
+                  <a class="btn btn-success login-button" href="{% url 'account_login' %}"
+                      role="button">Log In</a>
+                </div>
+                {% endif %} 
+            <!-- </div> -->
+        </div>    
+   </div>    
 </div>
 </header>
 

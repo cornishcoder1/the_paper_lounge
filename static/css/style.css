@@ -2,11 +2,12 @@
 
 body {
     font-family: 'Inconsolata', sans-serif;  
+    background:#FAFAF0;
 }
 
 .nav-bg {
-    background: #B4E4F1;
-    box-shadow: 0px 2px 5px #B4E4F1;
+    background: #D1F1F9;
+    box-shadow: 0px 2px 5px #D1F1F9;
 }
 
 .navbar {
@@ -14,17 +15,15 @@ body {
   
 }
 
-#dropdownMenuButton {
-    opacity: none;
-    background: grey;
-
+header {
+    /* z-index: 9999999; */
+    position: relative;
 }
 
 #hero-image {
 
-    height: 50vh;
-    background: url('https://res.cloudinary.com/dexhos525/image/upload/v1654255430/bookshelf_muted_sixtnm.jpg') no-repeat center;
-    opacity: 0.5;
+    height: 75vh;
+    background: url('https://res.cloudinary.com/dexhos525/image/upload/v1654449183/books_opaque_xujcn5.jpg') no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -34,7 +33,52 @@ body {
     justify-content:center;
     background-position: top;
     position: relative;
+}
 
+#hero-text-container {
+    height: 50vh;
+
+    position: relative;
+}
+
+.header-text {
+    height: 50vh;
+}
+
+.page-title {
+    margin-top: 1em;
+}
+
+/* #dropdownMenuButton {
+    background: #6D8B92;
+} */
+
+.dropdown {
+    position:relative;
+    margin: 0;
+    border-radius: 0.25rem
+}
+
+.dropdown-menu.show {
+    background: #5c636a;
+}
+
+.dropdown-item {
+    color: #ffff;
+}
+
+#hero-buttons {
+    padding-top: 20px;
+}
+
+.register-button {
+    background: #854D63;
+    border-color: #854D63;
+}
+
+.register-button:hover {
+    background: #5f3646;
+    border-color: #5f3646;
 }
 
 .btn-like {
@@ -49,3 +93,4 @@ body {
     background: transparent;
     border: none;
 }
+

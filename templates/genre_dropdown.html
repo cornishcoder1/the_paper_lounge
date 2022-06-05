@@ -1,11 +1,11 @@
-<div class="btn d-inline-block main-btn">
+<div class="btn d-inline-block main-btn dropdown-container">
     <!-- Dropdown button item based on code from 'Learn Django - Building a
     Simple Blog Categories Feature' by Very Academy (README code reference no.3) -->
     <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Browse Reviews by Genre
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton">
             {% for genre in genre_list %}
             <a class="dropdown-item" href="/genre/{{genre.name}}">
             {{ genre.name|title }}
