@@ -37,7 +37,6 @@ header {
 
 #hero-text-container {
     height: 50vh;
-
     position: relative;
 }
 
@@ -45,13 +44,13 @@ header {
     height: 50vh;
 }
 
-.page-title {
-    margin-top: 1em;
+.header-text > h1, p {
+    color: black;
 }
 
-/* #dropdownMenuButton {
-    background: #6D8B92;
-} */
+.page-title {
+    margin-top: 1em;  
+}
 
 .dropdown {
     position:relative;
@@ -67,18 +66,29 @@ header {
     color: #ffff;
 }
 
+/* Button styling */
+
 #hero-buttons {
     padding-top: 20px;
+}
+
+#add-review-button {
+    background: #854D63;
+    border-color: #854D63;
+    color: #FFFF;
+    margin-top: 1em;  
 }
 
 .register-button {
     background: #854D63;
     border-color: #854D63;
+    color: #FFFF;
 }
 
 .register-button:hover {
     background: #5f3646;
     border-color: #5f3646;
+    color: #FFFF;
 }
 
 .btn-like {
@@ -92,5 +102,11 @@ header {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+/* Card Styling */
+
+.card-body {
+    background-color: #FAFAF0;;
 }
 

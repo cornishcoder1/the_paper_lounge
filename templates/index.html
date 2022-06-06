@@ -10,27 +10,27 @@
        <div class="text-center text-white header-text">
             <h1 class="text-center page-title">Welcome to The Paper Lounge</h1>
             <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or register an account to start submitting your own</p>
-            <!-- <div class="row text-on-top"> -->
+            <div class="row text-on-top">
                 <!--Browse reviews by genre-->
                 {% include 'genre_dropdown.html' %}
                 <!--Add a review-->
                 {% if user.is_authenticated %}
-                <div class="col-2 mx-auto text-center mt-5">
+                <!-- <div class="col-2 mx-auto text-center mt-5"> -->
                     <div class="btn d-inline-block main-btn">
-                        <a class="btn btn-success register-button" href="{% url 'add_review' %}"
+                        <a class="btn btn-lg" id="add-review-button" href="{% url 'add_review' %}"
                       role="button">Add review here +</a>
                     </div>
-                </div>
+                <!-- </div> -->
                 {% else %}
                 <!--Shows Sign Up and Log In buttons if user is not logged in-->
                 <div id="hero-buttons">
-                  <a class="btn btn-success register-button" href="{% url 'account_signup' %}"
+                  <a class="btn register-button" href="{% url 'account_signup' %}"
                       role="button">Register</a>
                   <a class="btn btn-success login-button" href="{% url 'account_login' %}"
                       role="button">Log In</a>
                 </div>
                 {% endif %} 
-            <!-- </div> -->
+            </div>
         </div>    
    </div>    
 </div>
