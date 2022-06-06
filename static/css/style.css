@@ -6,7 +6,7 @@ body {
 }
 
 .nav-bg {
-    background: #D1F1F9;
+    background: #D8FFFA;
     box-shadow: 0px 2px 5px #D1F1F9;
 }
 
@@ -85,11 +85,13 @@ header {
     color: #FFFF;
 }
 
-.register-button:hover {
+.register-button:hover, #add-review-button:hover {
     background: #5f3646;
     border-color: #5f3646;
     color: #FFFF;
 }
+
+
 
 .btn-like {
     color: #E84610;
@@ -104,9 +106,34 @@ header {
     border: none;
 }
 
+.genre-page-dropdown {
+    padding-top: 50px;
+}
+
 /* Card Styling */
 
-.card-body {
-    background-color: #FAFAF0;;
+#genre-card {
+    border: 1px;
+    background: #D8FFFA;
+    box-shadow: 0px 2px 5px #D1F1F9;
+    margin-bottom: 50px;
+   
 }
+
+.card-body {
+    background-color: #FAFAF0;
+}
+
+.post-link {
+    color: black;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    color: #5f3646;
+}
+
+/* Genre page */
+
+
 
