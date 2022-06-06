@@ -19,7 +19,7 @@
             <div class="col mt-2 mb-3">
                 {% if user.id == review.creator.id %}
                 <!--Edit Button-->
-                <a href="{% url 'edit_review' review.slug %}" class="edit"><button class="btn btn-signup btn-md"
+                <a href="{% url 'edit_review' review.slug %}" class="edit"><button class="btn btn-signup btn btn-success"
                         value="{{ review.slug }}" type="button">Edit</button></a>
                 <!--Delete Button-->
                 <button class="btn btn-danger btn-md mx4" data-bs-toggle="modal"
