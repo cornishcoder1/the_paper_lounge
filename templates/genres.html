@@ -14,11 +14,13 @@ genlist
                 {% include 'genre_dropdown.html' %}    
         </div>      
         <!-- Topic card layout -->
-        <div class="mt-4">      
-            <div class="card" id="genre-card">    
-                    <h1 class="card-title text-center">{{ genlist.gen|title }}</h1>  
-            </div>
-        </div>    
+        <div class="container-genre-card">
+            <div class="mt-4">      
+                <div class="card text-center" id="genre-card">    
+                        <h1 class="card-title text-center">{{ genlist.gen|title }}</h1>  
+                </div>
+            </div>    
+        </div>
         <!-- Review entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
