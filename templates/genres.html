@@ -9,20 +9,16 @@ genlist
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="genre-page-dropdown text-center">
-            <div class="col-6 mx-auto">
-                <!-- Topic card layout -->
-                <!-- <div class="mt-4"> -->
-                    <div class="card" id="genre-card">
-                        <!-- <div class="card-body"> -->
-                            <h1 class="card-title text-center">{{ genlist.gen|title }}</h1>
-                        <!-- </div> -->
-                    </div>
-                <!-- </div> -->
-            </div>    
-        <!--Browse reviews by genre-->
-        {% include 'genre_dropdown.html' %}
-        </div>
+        <div class="genre-page-dropdown text-center">   
+                <!--Browse reviews by genre-->
+                {% include 'genre_dropdown.html' %}    
+        </div>      
+        <!-- Topic card layout -->
+        <div class="mt-4">      
+            <div class="card" id="genre-card">    
+                    <h1 class="card-title text-center">{{ genlist.gen|title }}</h1>  
+            </div>
+        </div>    
         <!-- Review entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
