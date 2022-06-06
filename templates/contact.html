@@ -4,19 +4,22 @@
 
 {% load crispy_forms_tags %}
 
-<h4 class="text-center my-2"><strong>Get in Touch</strong></h4>
-<p class="text-center">    
-    To suggest a new genre, report an issue or give any general feedback, 
-     please contact the administrator via the form below:    
-</p>
+<div class="card-body">
+    <h4 class="text-center my-2"><strong>Get in Touch</strong></h4>
+    <p class="text-center">    
+        To suggest a new genre, report an issue or give any general feedback, 
+        please contact the administrator via the form below:    
+    </p>
 
-<div class="card mb-4 mt-5 mx-3">
-    <div class="card-body">       
-        <form method="post" style="margin-top: 1.3em;">
-            {{ contact_form | crispy }}
-            {% csrf_token %}
-            <button type="submit" class="btn main-btn">Send</button>
-        </form>               
+    <div class="card mb-4 mt-5 mx-3 contact-form">
+        <div class="card-body">       
+            <form method="post">
+                {{ contact_form | crispy }}
+                {% csrf_token %}
+                <br>
+                <button type="submit" class="btn main-btn btn-secondary">Send</button>
+            </form>               
+        </div>
     </div>
 </div>
 {% endblock %}

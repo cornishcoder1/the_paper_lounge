@@ -112,6 +112,9 @@ header {
 
 /* Card Styling */
 
+.card {
+    border:none;
+}
 
 .container-genre-card {
     margin: auto;
@@ -136,6 +139,10 @@ header {
 
 .card-body {
     background-color: #FAFAF0;
+}
+
+.contact-form {
+    margin-top: 0rem!important;
 }
 
 .post-link {
