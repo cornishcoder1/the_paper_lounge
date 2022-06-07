@@ -23,7 +23,7 @@ header {
 #hero-image {
 
     height: 75vh;
-    background: url('https://res.cloudinary.com/dexhos525/image/upload/v1654449183/books_opaque_xujcn5.jpg') no-repeat center;
+    background: url('https://res.cloudinary.com/dexhos525/image/upload/v1654606403/books_opaque_dark_ll1ux6.jpg') no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -44,10 +44,6 @@ header {
     height: 50vh;
 }
 
-.header-text > h1, p {
-    color: black;
-}
-
 .page-title {
     margin-top: 1em;  
 }
@@ -66,9 +62,46 @@ header {
     color: #ffff;
 }
 
+.masthead {
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.heading-text, .heading-text > p {
+    color: #FAFAF0;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .review-detail-container {
     margin-top: 25px;
 }
+
+.review-body {
+   padding: 0;
+   background-color: #FAFAF0;
+}
+
+/* #comment-heading {
+    background-color: #854D63;
+} */
 
 /* Button styling */
 

@@ -15,12 +15,10 @@
                 {% include 'genre_dropdown.html' %}
                 <!--Add a review-->
                 {% if user.is_authenticated %}
-                <!-- <div class="col-2 mx-auto text-center mt-5"> -->
-                    <div class="btn d-inline-block main-btn">
-                        <a class="btn btn-lg" id="add-review-button" href="{% url 'add_review' %}"
-                      role="button">Add review here +</a>
-                    </div>
-                <!-- </div> -->
+                <div class="btn d-inline-block main-btn">
+                    <a class="btn btn-lg" id="add-review-button" href="{% url 'add_review' %}"
+                    role="button">Add review here +</a>
+                </div>
                 {% else %}
                 <!--Shows Sign Up and Log In buttons if user is not logged in-->
                 <div id="hero-buttons">
@@ -35,6 +33,8 @@
    </div>    
 </div>
 </header>
+
+
 <!-- Review entries Column -->
 <div class="container-fluid"> 
     <div class="col-12 mt-3 left">
