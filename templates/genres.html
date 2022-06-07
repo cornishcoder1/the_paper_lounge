@@ -26,10 +26,13 @@ genlist
         <div class="genre-page-dropdown text-center">   
                 <!--Browse reviews by genre-->
                 {% include 'genre_dropdown.html' %}    
-        </div>      
+        </div>   
+
+        {% if genlist.reviews %}
+
         <!-- Review entries Column -->
         <div class="col-12 mt-3 left">
-            <div class="row"> 
+            <div class="row">
                 {% for review in genlist.reviews %}
                 <div class="col-md-4">
                     <div class="card mb-4">
@@ -62,6 +65,13 @@ genlist
             {% endfor %} 
             </div>
         </div>
+
+        {% else %}
+
+        <h3 id="no-reviews">No reviews have been posted for this genre yet!</h3>
+
+        {% endif %}
+
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">
@@ -75,5 +85,8 @@ genlist
         </ul>
     </nav>
     {% endif %}
+
+
+
 </div>
 {% endblock %}
