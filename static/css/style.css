@@ -66,6 +66,10 @@ header {
     color: #ffff;
 }
 
+.review-detail-container {
+    margin-top: 25px;
+}
+
 /* Button styling */
 
 #hero-buttons {
@@ -124,8 +128,6 @@ header {
 }
 
 #genre-card {
- 
-    
     border: 1px solidrgba(0,0,0,.125);
     background: #D8FFFA;
     margin-bottom: 25px;
@@ -163,4 +165,14 @@ header {
 
 .about-img {
     margin-bottom: 25px;
+}
+
+footer a {
+    color: black;
+    font-size: x-large;
+    padding-right: 6px;
+}
+
+footer a:hover {
+    color: #5f3646;
 }

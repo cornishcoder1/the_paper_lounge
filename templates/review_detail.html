@@ -1,62 +1,47 @@
-{% extends 'base.html' %} {% block content %}
-
-{% load static%}
-
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ review.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ review.creator }} | {{ review.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+{% load static %}
 
 
-            <div class="col mt-2 mb-3">
-                {% if user.id == review.creator.id %}
-                <!--Edit Button-->
-                <a href="{% url 'edit_review' review.slug %}" class="edit"><button class="btn btn-signup btn btn-success"
-                        value="{{ review.slug }}" type="button">Edit</button></a>
-                <!--Delete Button-->
-                <button class="btn btn-danger btn-md mx4" data-bs-toggle="modal"
-                data-bs-target="#deleteModal{{ review.id }}">Delete</button>
-                {% endif %}
-            </div>        
-            <!--Modal-->
-            <div class="modal fade" id="deleteModal{{ review.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content delete-modal">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel">Delete</h5>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Are you sure you want to delete "{{ review.title }}"?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <a class="btn btn-danger" href="{% url 'delete_review' review.slug %}">Delete</a>
-                        </div>
-                    </div>
+<!-- Page Title -->
+{% block title %}
+<title>{{ review.title }}</title>
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post header-->
+            <header class="mb-4 review-detail-container">
+                <!-- Post title-->
+                <h1 class="fw-bolder mb-1 lettuce-text">{{ review.title }}</h1>
+                <!-- Post meta content-->
+                <div class="text-muted fst-italic mb-2">
+                    <p>Review created on: {{ review.created_on }}, by {{ review.creator }}.</p>
+                </div>
+            </header>
+
+            <div class="container">
+                <!-- Preview image figure-->
+                <div class="row">
+                    <figure class="mb-5">
+                        {% if "placeholder" in review.featured_image.url %}
+                        <img src="{% static 'images/placeholder.jpg' %}" width="100%">
+                        {% else %}
+                        <img src=" {{ review.featured_image.url }}" width="100%">
+                        {% endif %}
+                    </figure>
                 </div>
             </div>
-                
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in review.featured_image.url %}
-                <img src="{% static 'images/placeholder.jpg' %}" width="100%">
-                {% else %}
-                <img src=" {{ review.featured_image.url }}" width="100%">
-                {% endif %}
-            </div>
         </div>
-    </div>
+    </div>    
 </div>
+
 
 <div class="container">
     <div class="row">
@@ -156,4 +141,49 @@
     </div>
 </div>
 
-{% endblock content %}
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
