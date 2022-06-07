@@ -112,7 +112,7 @@ header {
 
 /* Card Styling */
 
-.card {
+.contact-form {
     border:none;
 }
 
@@ -124,12 +124,14 @@ header {
 }
 
 #genre-card {
-    border: 1px;
+ 
+    
+    border: 1px solidrgba(0,0,0,.125);
     background: #D8FFFA;
     margin-bottom: 25px;
     display: flex;
     height: auto;
-    box-shadow: 5px 5px 5px #D1F1F9;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #genre-card > h1 {
