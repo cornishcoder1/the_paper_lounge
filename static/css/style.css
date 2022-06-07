@@ -99,10 +99,6 @@ header {
    background-color: #FAFAF0;
 }
 
-/* #comment-heading {
-    background-color: #854D63;
-} */
-
 /* Button styling */
 
 #hero-buttons {
@@ -153,12 +149,10 @@ header {
     border:none;
 }
 
-.container-genre-card {
+/* .container-genre-card {
     margin: auto;
     width: min(90%, 70.5rem);
-    /* padding-top: 30px;
-    padding-bottom: 30px; */
-}
+} */
 
 #genre-card {
     border: 1px solidrgba(0,0,0,.125);
@@ -198,6 +192,7 @@ header {
 
 .about-img {
     margin-bottom: 25px;
+    
 }
 
 footer a {
