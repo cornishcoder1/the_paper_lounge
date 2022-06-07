@@ -123,6 +123,9 @@
         <div class="col-md-12 card mb-4 mt-3 card-body">
             <h3>Comments:</h3>
             <div>
+
+                {% if comments %}
+
                 <!--Lists all comments beneath recipe-->
                 {% for comment in comments %}
                 <div>
@@ -135,6 +138,13 @@
                     {{ comment.body | linebreaks }}
                 </div>
                 {% endfor %}
+
+                {% else %}
+
+                <p>No comments yet!</p>
+
+                {% endif %}
+
             </div>
         </div>
     </div>
