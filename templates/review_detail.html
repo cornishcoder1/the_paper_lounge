@@ -33,7 +33,7 @@
         </div>
     </header>
 </header>    
-<div class="col mt-2 mb-3 right">
+<div class="col mt-2 mb-3 text-center">
     {% if user.id == review.creator.id %}
     <!--Edit Button-->
     <a href="{% url 'edit_review' review.slug %}" class="edit"><button class="btn btn-success btn-md"
@@ -177,9 +177,10 @@
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    {{ comment_form | crispy }}
+                    <br>
+                    <button type="submit" class="btn btn-secondary">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}
