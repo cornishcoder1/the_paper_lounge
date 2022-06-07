@@ -7,24 +7,30 @@ genlist
 
 
 {% block content %}
+<header class="masthead" style="background-image: url('{% static 'images/placeholder.jpg' %}');">
+    <div class="opaque-overlay">&nbsp;</div>
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="heading-text">
+                        <h1>{{ genlist.gen|title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>   
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="genre-page-dropdown text-center">   
                 <!--Browse reviews by genre-->
                 {% include 'genre_dropdown.html' %}    
         </div>      
-        <!-- Topic card layout -->
-        <div class="container-genre-card">
-            <div class="mt-4">      
-                <div class="card text-center" id="genre-card">    
-                        <h1 class="card-title text-center">{{ genlist.gen|title }}</h1>  
-                </div>
-            </div>    
-        </div>
         <!-- Review entries Column -->
         <div class="col-12 mt-3 left">
-            <div class="row">
-                
+            <div class="row"> 
                 {% for review in genlist.reviews %}
                 <div class="col-md-4">
                     <div class="card mb-4">
