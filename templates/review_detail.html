@@ -65,7 +65,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col card mb-4 mt-3 left top review-body">
+        <div class="col card mb-4 mt-3 left top review-body comments">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
@@ -117,29 +117,54 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4 mt-3 review-body ">
+
+
+    <div class="row review-body">
+        <div class="col-md-12 card mb-4 mt-3 card-body">
             <h3>Comments:</h3>
-            <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+            <div>
+                <!--Lists all comments beneath recipe-->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
+                <div>
+                    <p>
+                        <strong>{{ comment.name }}</strong>
+                        <span class="text-muted">
                             {{ comment.created_on }}
-                        </span> wrote:
+                        </span>
                     </p>
-                    <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 review-body ">
+    </div>
+
+
+    <!-- <div class="row">
+        <div class="col-md-8 card mb-4 mt-3 review-body ">
+            
+            <div class="card-body">
+                <h3>Comments:</h3> -->
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                <!-- {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold"> -->
+                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                        <!-- {{ comment.name }}
+                        <span class=" text-muted font-weight-normal"> -->
+                            <!-- The comment's created date goes here -->
+                            <!-- {{ comment.created_on }}
+                        </span> wrote:
+                    </p> -->
+                    <!-- The body of the comment goes before the | -->
+                    <!-- {{ comment.body | linebreaks }}
+                </div> -->
+                <!-- Our for loop ends here -->
+                <!-- {% endfor %}
+            </div>
+        </div> -->
+
+        <div class="col-md-4 card mb-4  mt-3 review-body comments ">
             <div class="card-body">
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
