@@ -5,7 +5,6 @@
 genlist
 {% endblock %}
 
-
 {% block content %}
 <header class="masthead" style="background-image: url('{% static 'images/placeholder.jpg' %}');">
     <div class="opaque-overlay">&nbsp;</div>
@@ -27,9 +26,7 @@ genlist
                 <!--Browse reviews by genre-->
                 {% include 'genre_dropdown.html' %}    
         </div>   
-
         {% if genlist.reviews %}
-
         <!-- Review entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -65,13 +62,9 @@ genlist
             {% endfor %} 
             </div>
         </div>
-
         {% else %}
-
         <h3 id="no-reviews">No {{ genlist.gen|title }} reviews are currently published</h3>
-
         {% endif %}
-
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">
@@ -85,8 +78,5 @@ genlist
         </ul>
     </nav>
     {% endif %}
-
-
-
 </div>
 {% endblock %}
