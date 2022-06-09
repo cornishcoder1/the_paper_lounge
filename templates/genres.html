@@ -12,71 +12,78 @@ genlist
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="heading-text">
+                        {% if genre_exists %}
                         <h1>{{ genlist.gen|title }}</h1>
+                        {% else %}
+                        <p></p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </header>   
-
 <div class="container-fluid">
     <div class="row">
         <div class="genre-page-dropdown text-center">   
-                <!--Browse reviews by genre-->
-                {% include 'genre_dropdown.html' %}    
-        </div>   
-        {% if genlist.reviews %}
-        <!-- Review entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for review in genlist.reviews %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in review.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="{% static 'images/placeholder.jpg' %}">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ review.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Reviewer: {{ review.creator }}</p>
+            <!--Browse reviews by genre-->
+            {% include 'genre_dropdown.html' %}    
+        </div> 
+        {% if genre_exists %}  
+            {% if genlist.reviews %}
+            <!-- Review entries Column -->
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for review in genlist.reviews %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    {% if "placeholder" in review.featured_image.url %}
+                                    <img class="card-img-top"
+                                        src="{% static 'images/placeholder.jpg' %}">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ review.featured_image.url }}">
+                                    {% endif %}
+                                    <div class="image-flash">
+                                        <p class="author">Reviewer: {{ review.creator }}</p>
+                                    </div>
+                                    <a href="{% url 'review_detail' review.slug %}" class="post-link">
+                                        <h2 class="card-title">{{ review.title }}</h2>
+                                        <p class="card-text">by {{ review.author }}</p>
+                                    </a>
+                                    <hr />
+                                    <p class="card-text h6">{{ review.created_on}} <i class="far fa-heart"></i>
+                                        {{ review.number_of_likes }}</p>
                                 </div>
-                                <a href="{% url 'review_detail' review.slug %}" class="post-link">
-                                    <h2 class="card-title">{{ review.title }}</h2>
-                                    <p class="card-text">by {{ review.author }}</p>
-                                </a>
-                                <hr />
-                                <p class="card-text h6">{{ review.created_on}} <i class="far fa-heart"></i>
-                                    {{ review.number_of_likes }}</p>
                             </div>
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                    </div>
+                    <!-- <div class="row"> -->
+                    {% endif %}    
+                    {% endfor %} 
                 </div>
-            {% if forloop.counter|divisibleby:3 %}
             </div>
-            <div class="row">
-            {% endif %}    
-            {% endfor %} 
-            </div>
-        </div>
+            {% else %}
+            <h3 id="no-reviews">No {{ genlist.gen|title }} reviews are currently published</h3>
+            {% endif %}
+            {% if is_paginated %}
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
         {% else %}
-        <h3 id="no-reviews">No {{ genlist.gen|title }} reviews are currently published</h3>
+        <h3>This page does not exist</h3>
         {% endif %}
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
 {% endblock %}

@@ -73,14 +73,24 @@ class ReviewList(generic.ListView):
 class GenreReviewList(generic.ListView):
     template_name = 'genres.html'
     context_object_name = 'genlist'
+    
 
     def get_queryset(self):
+        # genre_exists = Genre.objects.filter(name=self.kwargs['genre']).exists()
         content = {
-            'gen': self.kwargs['genre'],
+            # 'gen': self.kwargs['genre'],
             'reviews': Review.objects.filter(genre__name=self.kwargs['genre'])
-            .filter(status=1)
+            .filter(status=1),
+            # 'genre_exists': genre_exists,
         }
+
         return content
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        genre_exists = Genre.objects.filter(name=self.kwargs['genre']).exists()
+        context['genre_exists'] = genre_exists
+        return context
 
 
 def genre_list(request):
