@@ -207,4 +207,5 @@ In Gitpod:
 # Acknowledgements
 - Ed B_alum for helping me fix a 404 error. 
 - Franciska from Tutor Support for helping me get my navbar drop down working. 
+- Ed from Tutor Support for your patience and help in error handing non-existent genre pages. 
 - Lisa Tinmurth and John from Tutor Support for helping me with my delete modal code. 
