@@ -78,7 +78,7 @@ class GenreReviewList(generic.ListView):
     def get_queryset(self):
         # genre_exists = Genre.objects.filter(name=self.kwargs['genre']).exists()
         content = {
-            # 'gen': self.kwargs['genre'],
+            'gen': self.kwargs['genre'],
             'reviews': Review.objects.filter(genre__name=self.kwargs['genre'])
             .filter(status=1),
             # 'genre_exists': genre_exists,
