@@ -32,4 +32,4 @@ I have performed unit tests for some page views, and forms.
 
 Result: 
 
-![Unit Test results](./static/unit_tests/unit_test_results.png)
+![Unit Test results](./static/unit_tests/views_unit_test_results.png)
