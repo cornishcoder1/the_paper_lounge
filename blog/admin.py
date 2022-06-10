@@ -3,21 +3,19 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Review, Comment, Genre
 
 
-
-
 @admin.register(Review)
 class ReviewAdmin(SummernoteModelAdmin):
 
-    prepopulated_fields = {'slug': ('title',)} #Slug field will populate automatically from the title field
+    prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
     list_display = ('title', 'slug', 'status', 'created_on', 'approved')
     search_fields = ('title', 'content')
-    summernote_fields = ('content') # Tells Django what fields we want to use Summernote with
+    summernote_fields = ('content')
     actions = ['approve_review']
 
     def approve_review(self, request, queryset):
         queryset.update(approved=True)
-        
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

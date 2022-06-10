@@ -142,20 +142,17 @@ header {
 
 #add-review-button {
     background: #854D63;
-    border-color: #854D63;
     color: #FFFF;
     margin-top: 1em;  
 }
 
 .register-button {
     background: #854D63;
-    border-color: #854D63;
     color: #FFFF;
 }
 
 .register-button:hover, #add-review-button:hover {
     background: #5f3646;
-    border-color: #5f3646;
     color: #FFFF;
 }
 
@@ -187,7 +184,7 @@ header {
 }
 
 #genre-card {
-    border: 1px solidrgba(0,0,0,.125);
+    border: 1px solid rgba(0,0,0,.125);
     background: #D8FFFA;
     margin-bottom: 25px;
     display: flex;

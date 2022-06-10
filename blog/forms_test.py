@@ -96,4 +96,3 @@ class TestContactForm(TestCase):
         self.assertEqual(
             form.Meta.fields, ('fname', 'lname', 'email', 'body',)
         )
-        
