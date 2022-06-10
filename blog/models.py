@@ -23,10 +23,10 @@ class Review(models.Model):
     """Review model"""
     title = models.CharField(max_length=200, unique=True)
     genre = models.ForeignKey(Genre, on_delete=models.PROTECT, blank=True,
-    null=True)
+            null=True)
     slug = models.SlugField(max_length=150, unique=True)
     creator = models.ForeignKey(User, on_delete=models.CASCADE,
-    related_name="review_posts")
+              related_name="review_posts")
     updated_on = models.DateTimeField(auto_now=True)
     rating = models.IntegerField(choices=RATING, default=0)
     content = models.TextField()
@@ -36,7 +36,7 @@ class Review(models.Model):
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='review_likes',
-    blank=True)
+            blank=True)
 
     # Save method sourced from Stack Overflow (README code reference no.1)
     def save(self, *args, **kwargs):

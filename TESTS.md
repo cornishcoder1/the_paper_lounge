@@ -115,4 +115,77 @@ No errors were found in the custom css. There were seven warnings raised, howeve
 
 ![Validator results](./static/validation_test_screenshots/css_validation_2.png)
 
+## PEP8 
+No errors were found in the python code. In settings.py there were some long line errors which were unavoidable, and in models.py there were some continuation lines marked where I had resolved some long line errors. 
 
+- admin.py (Contact Us app)
+
+![Validator results](./static/validation_test_screenshots/admin_contactus_PEP8.png)
+
+- admin.py (Blog app)
+
+![Validator results](./static/validation_test_screenshots/admin_PEP8.png)
+
+- apps.py (Contact Us app)
+
+![Validator results](./static/validation_test_screenshots/apps_contactus_PEP8.png)
+
+- apps.py (Blog app app)
+
+![Validator results](./static/validation_test_screenshots/apps_PEP8.png)
+
+- forms_test.py
+
+![Validator results](./static/validation_test_screenshots/form_tests_PEP8.png)
+
+- forms.py (Contact Us app)
+
+![Validator results](./static/validation_test_screenshots/forms_contactus_PEP8.png)
+
+- forms.py (Blog app)
+
+![Validator results](./static/validation_test_screenshots/forms_PEP8.png)
+
+- manage.py
+
+![Validator results](./static/validation_test_screenshots/manage_PEP8.png)
+
+- models.py (Contact Us app)
+
+![Validator results](./static/validation_test_screenshots/models_contactus_PEP8.png)
+
+- models.py (Blog app)
+
+![Validator results](./static/validation_test_screenshots/models_PEP8.png)
+
+- settings.py
+
+![Validator results](./static/validation_test_screenshots/settings_PEP8.png)
+
+- urls.py (Blog app)
+
+![Validator results](./static/validation_test_screenshots/urls_blog_PEP8.png)
+
+- urls.py (Contact Us app)
+
+![Validator results](./static/validation_test_screenshots/urls_contactus_PEP8.png)
+
+- urls.py
+
+![Validator results](./static/validation_test_screenshots/urls_PEP8.png)
+
+- views.py (Contact Us app)
+
+![Validator results](./static/validation_test_screenshots/views_contactus_PEP8.png)
+
+- views.py (Blog app)
+
+![Validator results](./static/validation_test_screenshots/views_PEP8.png)
+
+- views_test.py
+
+![Validator results](./static/validation_test_screenshots/views_tests_PEP8.png)
+
+- wsgi.py
+
+![Validator results](./static/validation_test_screenshots/wsgi_PEP8.png)
