@@ -33,8 +33,6 @@
    </div>    
 </div>
 </header>
-
-
 <!-- Review entries Column -->
 <div class="container-fluid"> 
     <div class="col-12 mt-3 left">
@@ -45,10 +43,11 @@
                     <div class="card-body">
                         <div class="image-container">
                             {% if "placeholder" in review.featured_image.url %}
-                            <img class="card-img-top"
+                            <img class="review-image card-img-top" alt="book review placeholder image"
                                 src="{% static 'images/placeholder.jpg' %}">
                             {% else %}
-                            <img class="card-img-top" src=" {{ review.featured_image.url }}">
+                            <img class="review-image card-img-top" alt="book review uploaded image"
+                                src=" {{ review.featured_image.url }}">
                             {% endif %}
                             <div class="image-flash">
                                 <p class="author">Reviewer: {{ review.creator }}</p>
@@ -84,6 +83,6 @@
         </ul>
     </nav>
     {% endif %}
-</div>
+
 
 {%endblock%}

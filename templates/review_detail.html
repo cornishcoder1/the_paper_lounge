@@ -5,14 +5,8 @@
 {% load static %}
 
 
-<!-- Page Title -->
-{% block title %}
-<title>{{ review.title }}</title>
-{% endblock %}
-
 
 <!-- Main Content -->
-
 
 <!-- Page Header-->
 {% if "placeholder" in review.featured_image.url %}
@@ -126,12 +120,12 @@
 
                 {% if comments %}
 
-                <!--Lists all comments beneath recipe-->
+                <!--Lists all comments beneath review-->
                 {% for comment in comments %}
                 <div>
                     <p>
                         <strong>{{ comment.name }}</strong>
-                        <span class="text-muted">
+                        <span>
                             {{ comment.created_on }}
                         </span>
                     </p>

@@ -2,6 +2,7 @@ from django.test import TestCase
 
 # Unit Testing - Views
 
+
 class TestIndexView(TestCase):
     "Unit test for home page"
     def test_index_page(self):

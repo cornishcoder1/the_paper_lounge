@@ -21,7 +21,6 @@ genlist
                 </div>
             </div>
         </div>
-    </div>
 </header>   
 <div class="container-fluid">
     <div class="row">
@@ -40,10 +39,11 @@ genlist
                             <div class="card-body">
                                 <div class="image-container">
                                     {% if "placeholder" in review.featured_image.url %}
-                                    <img class="card-img-top"
+                                    <img class="card-img-top" alt="review placeholder image"
                                         src="{% static 'images/placeholder.jpg' %}">
                                     {% else %}
-                                    <img class="card-img-top" src=" {{ review.featured_image.url }}">
+                                    <img class="card-img-top" alt="review uploaded image"
+                                    src=" {{ review.featured_image.url }}">
                                     {% endif %}
                                     <div class="image-flash">
                                         <p class="author">Reviewer: {{ review.creator }}</p>
