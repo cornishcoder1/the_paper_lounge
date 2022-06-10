@@ -9,7 +9,11 @@
    <div class="col-12" id="hero-text-container">
        <div class="text-center text-white header-text">
             <h1 class="text-center page-title">Welcome to The Paper Lounge</h1>
-            <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or register an account to start submitting your own</p>
+            {% if user.is_authenticated %}
+            <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or submit your own.</p>
+            {% else %}
+            <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or register an account to start submitting your own.</p>
+            {% endif %}           
             <div class="row text-on-top">
                 <!--Browse reviews by genre-->
                 {% include 'genre_dropdown.html' %}

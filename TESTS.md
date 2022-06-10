@@ -189,3 +189,153 @@ No errors were found in the python code. In settings.py there were some long lin
 - wsgi.py
 
 ![Validator results](./static/validation_test_screenshots/wsgi_PEP8.png)
+
+# User Story Testing 
+
+## Admin 
+
+- As a site admin I can access the admin panel from the navigation when logged in so that I don't have to manually type the URL each time. 
+
+When the admin is logged in, a link to the Admin Panel is present on the nav bar. When clicked this takes the admin straight to the admin panel. This link only shows for the admin, and is not accessible to any other user. 
+
+![User Story testing](./static/user_story_test_screenshots/admin_panel_UStesting.png)
+
+<br>
+
+- As a site admin I can approve reviews and comments so that suitability of content can be ensured.
+
+Within the admin panel, the admin can select Reviews or Comments:
+![User Story testing](./static/user_story_test_screenshots/approve_comments_reviews_1_UStesting.png)
+
+Comments can be selected and then approval can be performed via the dropdown menu:
+![User Story testing](./static/user_story_test_screenshots/approve_comments_reviews_2_UStesting.png)
+
+Reviews can be selected, and then approved and published: 
+![User Story testing](./static/user_story_test_screenshots/approve_comments_reviews_3_UStesting.png)
+
+Once approved and published, reviews and comments will become visible to all users on the site. 
+
+<br>
+
+- As a site admin/user I can create book reviews to share with other users.
+
+Within the admin panel, the admin can select Reviews:
+![User Story testing](./static/user_story_test_screenshots/create_reviews_admin_UStesting.png)
+
+'Add Review' can then be selected:
+![User Story testing](./static/user_story_test_screenshots/create_reviews_admin_2_UStesting.png)
+
+The review can then be submitted via the form. It still needs to be approved and published before it appears on the site: 
+![User Story testing](./static/user_story_test_screenshots/create_reviews_admin_4_UStesting.png)
+
+<br>
+
+- As a site admin/user I can update and delete reviews written by me so that I can manage my own content.
+
+Within the admin panel, the admin can select Reviews:
+![User Story testing](./static/user_story_test_screenshots/create_reviews_admin_UStesting.png)
+
+Here, the admin can edit or delete their review: 
+![User Story testing](./static/user_story_test_screenshots/edit_reviews_admin_UStesting.png)
+
+![User Story testing](./static/user_story_test_screenshots/edit_reviews_admin_2_UStesting.png)
+
+![User Story testing](./static/user_story_test_screenshots/edit_reviews_admin_3_UStesting.png)
+
+<br>
+
+- As a site admin I can manage genres so that I can add to, modify or remove them
+
+Within the admin panel, the admin can select Genres:
+![User Story testing](./static/user_story_test_screenshots/manage_genres_admin_UStesting.png)
+
+Here, new genres can be added or existing genres can be edited or deleted:
+![User Story testing](./static/user_story_test_screenshots/manage_genres_admin_2_UStesting.png)
+
+<br>
+
+- As a site admin I can view messages submitted via the contact form so that I can communicate with site users.
+
+Within the admin panel, the admin can select Contacts:
+![User Story testing](./static/user_story_test_screenshots/view_messages_admin_UStesting.png)
+
+Here, the admin can click into messages to read them: 
+![User Story testing](./static/user_story_test_screenshots/view_messages_admin_2_UStesting.png)
+
+![User Story testing](./static/user_story_test_screenshots/view_messages_admin_3_UStesting.png)
+
+<br>
+
+- As a site admin I can remove users so that they will no longer be able to post unsuitable content.
+
+Within the admin panel, the admin can select Users: 
+![User Story testing](./static/user_story_test_screenshots/manage_users_admin_UStesting.png)
+
+Here, the admin can select users to delete: 
+![User Story testing](./static/user_story_test_screenshots/manage_users_admin_2_UStesting.png)
+
+The admin is then informed that all objects related to that user will also be deleted, and they are asked to confirm they are sure they want to delete that user:
+![User Story testing](./static/user_story_test_screenshots/manage_users_admin_3_UStesting.png)
+
+
+## Site User
+
+- As a site user I can register for an account to be able to post reviews and comments.
+
+The user can select 'register' from either the navigation or the homepage header:
+![User Story testing](./static/user_story_test_screenshots/register_user_UStesting.png)
+
+The user can then fill out the register form and click 'Register': 
+![User Story testing](./static/user_story_test_screenshots/register_user_2_UStesting.png)
+
+The user is then redirected to the homepage, where a pop-up message informs them that they are logged in successfully. The 'Add Review" button also appears in header:
+![User Story testing](./static/user_story_test_screenshots/register_user_3_UStesting.png)
+
+<br>
+
+- As a returning site user I can login to the website so that I can post reviews and comments.
+
+The user can select 'log in' from either the navigation or the homepage header:
+![User Story testing](./static/user_story_test_screenshots/register_user_UStesting.png)
+
+The user can log in via the form: 
+![User Story testing](./static/user_story_test_screenshots/login_user_UStesting.png)
+
+The user is then redirected to the homepage, where a pop-up message informs them that they are logged in successfully. The 'Add Review" button also appears in header:
+![User Story testing](./static/user_story_test_screenshots/register_user_3_UStesting.png)
+
+Once a user is registered and/or logged in, the comments form also becomes available in the review detail: 
+![User Story testing](./static/user_story_test_screenshots/login_user_3_UStesting.png)
+
+<br>
+
+- As a returning user I can log out my account to ensure security on any shared devices I may use.
+
+The logged in user can select 'log out' from the navigation:
+![User Story testing](./static/user_story_test_screenshots/logout_user_UStesting.png)
+
+Here, the user is asked if they are sure they want to log out: 
+![User Story testing](./static/user_story_test_screenshots/logout_user_2_UStesting.png)
+
+The user is then redirected to the homepage, where a pop-up message informs them that they are logged out successfully: 
+![User Story testing](./static/user_story_test_screenshots/logout_user_3_UStesting.png)
+
+<br>
+
+- As a site admin/user I can create book reviews to share with other users.
+
+The logged in user can select 'Add review here' from the header:
+![User Story testing](./static/user_story_test_screenshots/add_review_user_UStesting.png)
+
+The user can then fill out and submit a form, which is then sent to the admin for approval:
+![User Story testing](./static/user_story_test_screenshots/add_review_user_2_UStesting.png)
+
+Upon submitting, the user is redirected to the homepage, where a pop-up message informs them that their review has been submitted for approval:
+![User Story testing](./static/user_story_test_screenshots/add_review_user_3_UStesting.png)
+
+<br>
+
+- As a site admin/user I can update and delete reviews written by me so that I can manage my own content.
+
+
+
