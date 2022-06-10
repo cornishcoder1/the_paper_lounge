@@ -10,7 +10,7 @@ class TestIndexView(TestCase):
         self.assertTemplateUsed(response, 'index.html')
 
 
-class AboutView(TestCase):
+class TestAboutView(TestCase):
     "Unit test for about page"
     def test_about_page(self):
         response = self.client.get('/about/')

@@ -14,9 +14,10 @@
 ***
 
 # Unit Testing
-I have performed unit tests for some page views, and forms.
+I have performed unit tests for some page views, and all forms.
 
 ## Views
+These views were tested to ensure the correct page is rendered back to the user. 
 
 - Homepage
 
@@ -33,3 +34,26 @@ I have performed unit tests for some page views, and forms.
 Result: 
 
 ![Unit Test results](./static/unit_tests/views_unit_test_results.png)
+
+## Forms
+All forms were tested to ensure that mandatory fields are identified as such, and that data is submitted to the correct location. 
+
+- Review Form
+
+![Unit Test for Add Review form](./static/unit_tests/test_review_form_1.png)
+
+![Unit Test for Add Review form](./static/unit_tests/test_review_form_2.png)
+
+- Comment Form
+
+![Unit Test for Comment form](./static/unit_tests/test_comment_form.png)
+
+- Contact Form
+
+![Unit Test for Contact form](./static/unit_tests/test_contact_form_1.png)
+
+![Unit Test for Contact form](./static/unit_tests/test_contact_form_2.png)
+
+Result: 
+
+![Unit Test results](./static/unit_tests/forms_unit_test_results.png)
