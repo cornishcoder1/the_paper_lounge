@@ -7,7 +7,7 @@
     - [W3C Markup](#w3c-markup)
     - [W3C-CSS](#w3c-css) 
     - [PEP8](#pep8)
-- [User Story Testing](#ser-story-testing)
+- [User Story Testing](#user-story-testing)
     - [Admin](#admin)
     - [Site User](#site-user)
 - [Responsive Testing](#Responsive-Testing)
@@ -116,7 +116,7 @@ No errors were found in the custom css. There were seven warnings raised, howeve
 ![Validator results](./static/validation_test_screenshots/css_validation_2.png)
 
 ## PEP8 
-No errors were found in the python code. In settings.py there were some long line errors which were unavoidable, and in models.py there were some continuation lines marked where I had resolved some long line errors. 
+No errors were found in the python code. In settings.py there were some long line errors which were unavoidable, and in models.py there were some continuation lines marked where I had resolved long line errors. 
 
 - admin.py (Contact Us app)
 
@@ -336,6 +336,89 @@ Upon submitting, the user is redirected to the homepage, where a pop-up message 
 <br>
 
 - As a site admin/user I can update and delete reviews written by me so that I can manage my own content.
+
+If a user clicks into a review they have written, a Delete and an Edit button will show at the top of the page:
+![User Story testing](./static/user_story_test_screenshots/edit_review_user_UStesting.png)
+
+When Edit is selected, the user is taken to a form where they can make changes to the review:
+![User Story testing](./static/user_story_test_screenshots/edit_review_user_2_UStesting.png)
+
+Once the user has made the necessary changes and clicked the 'Submit' button, they are redirected to the home page. A pop-up message informs them that their review has been updated successfully:
+![User Story testing](./static/user_story_test_screenshots/edit_review_user_3_UStesting.png)
+
+When the delete button is clicked, a modal appears asking the user if they are sure they want to delete the review:
+![User Story testing](./static/user_story_test_screenshots/delete_review_user_UStesting.png)
+
+Upon confirming, the user is redirected to the homepage, and a pop-up message informs them that their review has been deleted successfully: 
+![User Story testing](./static/user_story_test_screenshots/delete_review_user_2_UStesting.png)
+
+<br>
+
+- As a returning user I can see if any new reviews have been added so that I can read new content.
+
+All reviews are displayed on the homepage to users, whether logged in or not. The reviews are listed in chronological order (newest first): 
+![User Story testing](./static/user_story_test_screenshots/view_reviews_user_UStesting.png)
+
+<br>
+
+- As a site user I can click into individual reviews so that I can read them fully.
+
+All users can click on the title of a review, which will take them into the full review detail (the comment form is only available to logged in users):
+![User Story testing](./static/user_story_test_screenshots/view_review_detail_user_UStesting.png)
+
+<br>
+
+- As a returning user I can see if my review has received any comments and/or likes so that I can see the engagement with my review.
+
+Logged in users can click into their reviews and view any comments and number of likes:
+![User Story testing](./static/user_story_test_screenshots/view_engagement_user_UStesting.png)
+
+<br>
+
+- As a site user I can view and click on different genre categories so that I can find reviews relevant to my specific reading interests.
+
+A dropdown button is present in the header of the home page, where users can select from a pre-defined list of genres. (When submitting a review, users are asked to select a genre so that it is categorised effectively):
+![User Story testing](./static/user_story_test_screenshots/browse_genres_user_UStesting.png)
+
+Upon selecting a genre, the user is taken to that specific genre page, where all reviews categorised with that genre are listed: 
+![User Story testing](./static/user_story_test_screenshots/browse_genres_user_2_UStesting.png)
+
+![User Story testing](./static/user_story_test_screenshots/browse_genres_user_3_UStesting.png)
+
+<br>
+
+- As a site user I can post comments on existing reviews so that I can express my thoughts and opinions.
+
+When a logged in user clicks into a review, they have the option to post a comment via a form:
+![User Story testing](./static/user_story_test_screenshots/post_comments_user_UStesting.png)
+
+When the user clicks the Submit button, they are then informed via a pop-up message that their comment has been submitted for approval:
+![User Story testing](./static/user_story_test_screenshots/post_comments_user_2_UStesting.png)
+
+<br>
+
+- As a site user I can like or unlike a review so that I can interact with the content.
+
+A logged in user can like and unlike reviews by clicking the heart icon at the bottom of the review body: 
+![User Story testing](./static/user_story_test_screenshots/like_reviews_user_UStesting.png)
+
+<br>
+
+- As a site user I can fill out and submit a contact form so that I can make admin aware of any issues or feedback.
+
+The user can click on 'Contact Us' in the navigation bar, where they can fill out and submit a contact form:
+![User Story testing](./static/user_story_test_screenshots/contact_form_user_UStesting.png)
+
+When the user clicks the Submit button, the form is submitted to the admin and a pop-up message informs the user that the message has been submitted successfully:
+![User Story testing](./static/user_story_test_screenshots/contact_form_user_2_UStesting.png)
+
+<br>
+
+- As a user I can read about the blog so that I can find out more information.
+
+There is an additional 'About' page accessible from the navigation bar which gives a short introduction to the site and a list of community rules:
+![User Story testing](./static/user_story_test_screenshots/about_user_UStesting.png)
+
 
 
 
