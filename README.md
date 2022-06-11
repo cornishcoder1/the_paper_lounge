@@ -71,7 +71,7 @@ The target audience for the website is:
 - People who want to read more, and are looking for recomendations on what titles may be good to start with. 
 
 
-# User Stories
+## User Stories
 
 ## As a site user or admin:
 - I can create book reviews to share with other users.
@@ -103,7 +103,9 @@ The target audience for the website is:
 The development of this project was managed and implemented using GitHub Projects Kanban Board:
 <a href="https://github.com/cornishcoder1/the_paper_lounge/projects/1" target="_blank" rel="noopener" aria-label="Link to GitHub Projects">The Paper Lounge - User Stories</a>
 
-# The Scope Plane
+<br>
+
+## The Scope Plane
 
 
 
