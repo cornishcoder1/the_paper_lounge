@@ -127,6 +127,13 @@ Flowchart
 
 ![Flowchart](./static/images/flowchart.png)
 
+Database Schema
+
+Three custom models were used for the website, Review, Genre and Comment. Two built in models were used for User and Contact. Django AllAuth was used for user authentication. 
+
+![DatabaseSchema](./static/images/database_schema.png)
+
+
 
 
 
