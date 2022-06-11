@@ -166,23 +166,57 @@ For the placeholder image (if a user does not upload their own image when submit
 ![PlaceholderImage](./static/images/placeholder.jpg)
 
 All other images present on the site will be chosen by users. The admin can change or remove images that are inappropriate, before approving and publishing reviews to the main site. 
-
-
-
-
-
-
-## Design
-
-
+***
 
 # Features
 
-## Design Features
+## Navigation
 
-## Existing Features 
+There are three role-based navigation bars, depending on the user.
 
-## Features Left to Implement
+- Navigation 1 - Unregistered/logged out users
+
+This navbar allows the user to access the homepage, about and the contact form. It also gives them access to the register and login pages. 
+
+![navbar1](./assets/features/navbar_1.png)
+
+- Navigation 2 - Registered users
+
+This navbar does not include access to the register page, but instead to the log out page. 
+
+![navbar2](./assets/features/navbar_2.png)
+
+- Navigation 3 - Admin
+
+This navbar replaces the link to the contact form, with a link directly to the admin panel. This means that the admin does not have to manually type the url into the browser every time they want to access it.
+
+![navbar3](./assets/features/navbar_3.png)
+
+## Footer 
+
+The footer is kept simple with minimal styling, although the icons do change colour to mauve on hover. The icons link to the associated social media sites, although in a real world situation they would link to The Paper Lounge accounts on each platform. 
+
+![footer](./assets/features/footer.png)
+
+## Other Features
+
+- Home page - This has a hero image, with a title, description of the site and the 'Browse Reviews by Genre' dropdown button. It also features register and login buttons. Once a user is registered and logged in, these buttons are replaced by the 'Add Review' button. Below this, all reviews will show, ordered by date published (newest first).
+
+- About page - This page is available to all users, and gives a brief description of the site and community rules. 
+
+- Register/Login/Logout - Django AllAuth allows users to securely log into the site and gain access to functionality only available to registered users. Users receive feedback in the form of pop-up messages when they are registered, logged in and logged out successfully. 
+
+- Contact Us - All users can submit a contact from which goes to the admin. This allows them to report issues, give feedback or suggest new features. Users receive feedback in the form of a pop-up message when a form is sent successfully. All fields are marked as mandatory and must be completed before the user can submit the form. 
+
+- Browse Reviews by Genre - The dropdown button allows users to navigate to genre specific pages, and view reviews submitted under that genre only. If no reviews are listed on a particular genre page, this is communicated to the user in the main body of the page. Also, if a user tries to access a genre that does not exist (by typing an invalid slug into the URL, they will be informed in the main body of the resulting page). 
+
+- Add/Edit Review - This form allows users to write and submit their own reviews, apply genres and ratings, and upload an image to accompany the review. If an image is not uploaded, then the placeholder image will appear on that review when published. All fields are marked as mandatory and must be completed before the user can submit the form. 
+
+- Review Cards - All reviews first appear on the homepage and genre pages as cards. The book title can be clicked to open the review detail page. The cards feature the review image, reviewer name, book title and author, date and time of publication and number of likes. 
+
+- Review detail - Once opened the review detail page shows the image as a masthead with the book title and reviewer name on top. It then shows the body of the review, star rating and number of likes. Approved comments are then listed below, with the comment form showing for logged in users. Users receive feedback in the form of a pop-up message when a comment has been successfully submitted for approval. The body field is mandatory and must be completed before the user can submit the comment form. 
+
+# Features Left to Implement
 
 
 
