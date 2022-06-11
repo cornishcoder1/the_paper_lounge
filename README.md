@@ -24,10 +24,7 @@
      4. [User Testing](#User-Testing)
 7. [Deployment](#Deployment)
      1. [Initial Deployment](#Initial-Deployment)
-
      2. [Final Deployment](#Final-Deployment)
-     3. [Forking the Repository](#Forking-the-Repository)
-     4. [Creating a Clone](#Creating-a-Clone)
 8. [Credits](#Credits)
      1. [Content](#Content)
      2. [Media](#Media)
@@ -35,14 +32,82 @@
 ***
 
 # Introduction
+The Paper Lounge is a community orientated blog for book lovers, where you can browse and read reviews, or write and submit you own. It is the perfect place to find your next favourite book, and discuss literature with fellow book worms. 
 
+Browse through the genres to find reviews specific to your interests, or share your own reviews to help others decide on what to read next. 
 
+The Paper Lounge has been built using the Django Framework in Python, JavaScript, HTML and CSS. It provides user authentication and full CRUD functionality. 
+
+<a href="https://the-paper-lounge.herokuapp.com/" target="_blank" rel="noopener" aria-label="Link to open deployed site">Link to deployed site</a>
+
+![Am I Responsive](./static/images/am_i_responsive.png)
 
 # UX
 
-## User Stories
+## The Strategy Plane
+This application has been produced for Porfolio Project 4, as part of the Code Institute Diploma in Full-Stack Software Development. The project aims to demonstrate skills learnt in HTML, CSS, Python and JavaScript using the Django framework. 
 
-## Development Planes
+The main aim of the website is to provide an online community for book lovers, where they can find reviews of books they have not yet read to help inform their reading choices, or post reviews of their own to share experiences and opinions of books they have read. 
+
+General users can:
+- Browse and read existing reviews
+- Send messages to the admin via the contact form
+
+In addition, registered users can:
+- Create, update and delete their own reviews.
+- Like and comment on other user's reviews. 
+
+The admin can:
+- Access the admin panel from the navigation bar when logged in. 
+- Create, update and delete their own reviews from the main site, or the admin panel. 
+- Approve and publish reviews and comments from users via the admin panel. 
+- Create, update and delete Genres via the admin panel. 
+- Manage users and their content via the admin panel. 
+
+The target audience for the website is:
+- People who want to share their thoughts and opinions on books they have read. 
+- People who are looking generally for book recomendations. 
+- People who want to find new books to read of a specific genre. 
+- People who want to read more, and are looking for recomendations on what titles may be good to start with. 
+
+
+# User Stories
+
+## As a site user or admin:
+- I can create book reviews to share with other users.
+- I can see if my review has received any comments and/or likes so that I can see the engagement with my review.
+- I can update and delete reviews written by me so that I can manage my own content. 
+- I can like or unlike a review so that I can interact with the content.
+- I can post comments on existing reviews so that I can express my thoughts and opinions.
+
+## As a site user: 
+- I can navigate easily around the site so that I can find the information and functionality I am looking for quickly and easily.
+- I can read about the blog so that I can find out more information about the blog. 
+- I can view and click on different genre categories so that I can find reviews relevant to my specific reading interests.
+- I can click into individual reviews so that I can read them fully.
+- I can see if any new reviews have been added so that I can read new content.
+- I can fill out and submit a contact form so that I can make admin aware of any issues or feedback.
+- I can register for an account to be able to post reviews and comments.
+- I can login to the website so that I can post reviews and comments.
+- I can log out my account to ensure security on any shared devices I may use.
+
+## As a site admin:
+- I can access the admin panel from the navigation bar when logged in so that I don't have to manually type the URL each time.
+- I can approve reviews and comments so that suitability of content can be ensured.
+- I can manage genres so that I can add to, modify or remove them.
+- I can view messages submitted via the contact form so that I can communicate with site users.
+- I can remove users so that they will no longer be able to post unsuitable content.
+
+## Agile methodology
+
+The development of this project was managed and implemented using GitHub Projects Kanban Board:
+<a href="https://github.com/cornishcoder1/the_paper_lounge/projects/1" target="_blank" rel="noopener" aria-label="Link to GitHub Projects">The Paper Lounge - User Stories</a>
+
+# The Scope Plane
+
+
+
+
 
 ## Design
 
@@ -192,12 +257,6 @@ In Heroku:
 1. Go to 'Settings' tab and reveal config vars. Remove COLLECT_STATIC environment variable. 
 2. Go to 'Deploy' tab and scroll down to 'Deploy Branch' (ensure github repo is connected). Run deployment. 
 3. Wait for confirmation that application has deployed. 
-
-
-## Forking the Repository
-
-## Creating a Clone
-
 
 
 # References 
