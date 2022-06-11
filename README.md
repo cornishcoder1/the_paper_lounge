@@ -32,6 +32,7 @@
 ***
 
 # Introduction
+
 The Paper Lounge is a community orientated blog for book lovers, where you can browse and read reviews, or write and submit you own. It is the perfect place to find your next favourite book, and discuss literature with fellow book worms. 
 
 Browse through the genres to find reviews specific to your interests, or share your own reviews to help others decide on what to read next. 
@@ -41,10 +42,11 @@ The Paper Lounge has been built using the Django Framework in Python, JavaScript
 <a href="https://the-paper-lounge.herokuapp.com/" target="_blank" rel="noopener" aria-label="Link to open deployed site">Link to deployed site</a>
 
 ![Am I Responsive](./static/images/am_i_responsive.png)
-
+***
 # UX
 
-## The Strategy Plane
+# The Strategy Plane
+
 This application has been produced for Porfolio Project 4, as part of the Code Institute Diploma in Full-Stack Software Development. The project aims to demonstrate skills learnt in HTML, CSS, Python and JavaScript using the Django framework. 
 
 The main aim of the website is to provide an online community for book lovers, where they can find reviews of books they have not yet read to help inform their reading choices, or post reviews of their own to share experiences and opinions of books they have read. 
@@ -105,7 +107,8 @@ The development of this project was managed and implemented using GitHub Project
 
 <br>
 
-## The Scope Plane
+# The Scope Plane
+
 Site goals:
 - To provide the user with a platform to find book reviews and recommendations. 
 - To provide a visually pleasing and engaging website where the purpose is immediately clear, and is easy to navigate. 
@@ -121,7 +124,7 @@ Features planned:
 - User register, log in and log out. 
 - Custom error pages. 
 
-## The Structure Plane
+# The Structure Plane
 
 Flowchart
 
@@ -133,10 +136,36 @@ Three custom models were used for the website, Review, Genre and Comment. Two bu
 
 ![DatabaseSchema](./static/images/database_schema.png)
 
-## The Skeleton Plane
+
+# The Skeleton Plane
 
 Wireframes:
+
 All wireframes for the project can be found [here](./assets/wireframes/)
+
+<br>
+
+# The Surface Plane
+
+## Colour Scheme
+
+![ColorScheme](./static/images/color_scheme.png)
+
+I wanted the main colours of the site to be calming and neutral, hence the use of the light cyan and ivory tones. Buttons were styled in bolder colors, with the 'browse reviews by genre' dropdown button and submit/send buttons being a dark grey, and the 'add review here' and register buttons a mauve colour. The login and edit buttons are kept green in keeping with bootstrap styling, as is the red delete button. 
+
+## Typography 
+
+The font used throughout the website is 'Inconsolata'. What I liked about this font was it's 'typewriter' look, which I felt was a good style fit for a book review website. 
+
+## Imagery
+
+For the homepage hero image I used an image of books on a shelf. This helps the user identify quickly what the website is about. I darkened the image so that the white text on top stood out and was more visible. 
+![HeroImage](./static/images/books_opaque.jpg)
+
+For the placeholder image (if a user does not upload their own image when submitting a review), I used an image of an open book. The image is stylish and neutral in colour, which is ideal for a placeholder which may appear multiple times on a page. I also used this image as the masthead for the genre pages. 
+![PlaceholderImage](./static/images/placeholder.jpg)
+
+All other images present on the site will be chosen by users. The admin can change or remove images that are inappropriate, before approving and publishing reviews to the main site. 
 
 
 
