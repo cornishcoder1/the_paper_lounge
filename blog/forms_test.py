@@ -1,6 +1,6 @@
 from django.test import TestCase
-from .forms import ReviewForm, CommentForm
 from contactus.forms import ContactForm
+from .forms import ReviewForm, CommentForm
 
 # Unit Testing - Forms
 

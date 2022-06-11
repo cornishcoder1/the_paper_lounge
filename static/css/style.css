@@ -167,6 +167,8 @@ border: none;
     color: #FFFF;
 }
 
+/* Like button styling taken from Codestar Blog walkthrough project*/
+
 .btn-like {
     color: #E84610;
     border: none;

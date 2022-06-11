@@ -84,7 +84,6 @@ class GenreReviewList(generic.ListView):
             'gen': self.kwargs['genre'],
             'reviews': Review.objects.filter(genre__name=self.kwargs['genre'])
             .filter(status=1),
-            # 'genre_exists': genre_exists,
         }
 
         return content
@@ -175,4 +174,3 @@ class ReviewLike(View):
             review.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('review_detail', args=[slug]))
-
