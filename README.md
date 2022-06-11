@@ -181,8 +181,18 @@ In Gitpod:
 9. Open app in Heroku once deployment is completed, to insure installation was successful 
     
 
-
 ## Final Deployment
+In Gitpod:
+1. Ensure all files are up to date.
+2. Ensure 'DEBUG = FALSE' in settings.py
+3. Add "X_FRAME_OPTIONS= 'SAME ORIGIN'" to settings.py, to ensure that summernote editor works in deployed project.
+5. Add, commit and push deployment commit to GitHub.
+
+In Heroku: 
+1. Go to 'Settings' tab and reveal config vars. Remove COLLECT_STATIC environment variable. 
+2. Go to 'Deploy' tab and scroll down to 'Deploy Branch' (ensure github repo is connected). Run deployment. 
+3. Wait for confirmation that application has deployed. 
+
 
 ## Forking the Repository
 
