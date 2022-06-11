@@ -417,10 +417,23 @@ In Heroku:
 
 - Placeholder image by <a href="https://www.pexels.com/@caio/" title="Caio">Caio</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
 
+- Hero image by <a href="https://unsplash.com/@jruscello" title="Jessica Ruscello">Jessica Ruscello</a> on <a href="https://unsplash.com/" title="Unsplash">Unsplash</a>
+
+- Rum image by <a href="https://www.pexels.com/@disguise-truth/" title="Anastasia Zhenina">Anastasia Zhenina</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
+- Zombie image by <a href="https://www.pexels.com/@cottonbro/" title="Cotton Bro">Cotton Bro</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
+- Train image by <a href="https://www.pexels.com/@gabriela-palai-129458/" title="Gabriela Palai">Gabriela Palai</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
 - About page image by <a href="https://www.pexels.com/@emrecan/" title="Emre Can Acer">Emre Can Acer</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
+- All other images currently present on the site belong to myself. 
 
 ## Acknowledgements
 - Ed B_alum for helping me fix a 404 error. 
+
 - Franciska from Tutor Support for helping me get my navbar drop down working. 
+
 - Ed from Tutor Support for your patience and help in error handing non-existent genre pages. 
+
 - Lisa Tinmurth and John from Tutor Support for helping me with my delete modal code. 
