@@ -426,11 +426,16 @@ The website has been tested using the following browsers:
 - Google Chrome
 - Microsoft Edge
 - Mozilla Firefox
-- Safari
+- Safari HERE
+
+The website has been tested on the following devices: 
+
+- MacBook Air
+- Dell Latitude 5300
+- iPhone SE 2020
 
 The following emulated devices have been tested in Dev Tools:
 
-- iPhone 5/SE
 - iPhone 6/7/8
 - iPhone 6/7/8 Plus
 - iPhone X

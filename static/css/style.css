@@ -134,6 +134,13 @@ header {
    margin: 1.5% 5%;
 }
 
+/* Star icon styling (rating) */
+
+#rating-star {
+color: #B5A500;
+border: none;
+}
+
 /* Button styling */
 
 #hero-buttons {
