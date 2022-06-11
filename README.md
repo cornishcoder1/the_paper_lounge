@@ -106,6 +106,26 @@ The development of this project was managed and implemented using GitHub Project
 <br>
 
 ## The Scope Plane
+Site goals:
+- To provide the user with a platform to find book reviews and recommendations. 
+- To provide a visually pleasing and engaging website where the purpose is immediately clear, and is easy to navigate. 
+- To provide role-based permissions to allow users to create, review, update and delete their own reviews. The admin can approve, manage and remove content and users. 
+
+Features planned:
+- Visually appealing design. 
+- Intuitive and easy to use navigation. 
+- Role-based navigation for different users. 
+- Book reviews - Registered users can create, review, update and delete their own reviews. 
+- Browse by genre - All users can browse reviews by genre. 
+- Comments and likes - Registered users can like and comment on reviews. 
+- User register, log in and log out. 
+- Custom error pages. 
+
+## The Structure Plane
+
+Flowchart
+
+![Flowchart](./static/images/flowchart.png)
 
 
 
