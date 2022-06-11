@@ -419,6 +419,24 @@ When the user clicks the Submit button, the form is submitted to the admin and a
 There is an additional 'About' page accessible from the navigation bar which gives a short introduction to the site and a list of community rules:
 ![User Story testing](./static/user_story_test_screenshots/about_user_UStesting.png)
 
+# Responsive Testing 
+
+The website has been tested using the following browsers:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Safari
+
+The following emulated devices have been tested in Dev Tools:
+
+- iPhone 5/SE
+- iPhone 6/7/8
+- iPhone 6/7/8 Plus
+- iPhone X
+- iPad
+- iPad Pro
+
 
 
 

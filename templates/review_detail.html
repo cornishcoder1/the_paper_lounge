@@ -4,8 +4,6 @@
 
 {% load static %}
 
-
-
 <!-- Main Content -->
 
 <!-- Page Header-->
@@ -95,13 +93,7 @@
                         <!-- The number of likes goes before the closing strong tag -->
                         <!-- <strong class="text-secondary"><i class="far fa-heart"></i> {{ review.number_of_likes }} </strong> -->
                     </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -111,15 +103,11 @@
             <hr>
         </div>
     </div>
-
-
     <div class="row review-body">
-        <div class="col-md-12 card mb-4 mt-3 card-body">
+        <div class="col-md-12 card mb-4 mt-3 card-body">            
             <h3>Comments:</h3>
             <div>
-
                 {% if comments %}
-
                 <!--Lists all comments beneath review-->
                 {% for comment in comments %}
                 <div>
@@ -132,13 +120,17 @@
                     {{ comment.body | linebreaks }}
                 </div>
                 {% endfor %}
-
                 {% else %}
-
                 <p>No comments yet!</p>
-
                 {% endif %}
-
+            </div>
+            <div class>
+                {% with comments.count as total_comments %}
+                <strong class="text-secondary"><i class="far fa-comments"></i>
+                    <!-- Our total_comments variable goes before the closing strong tag -->
+                    <span class="text-secondary">{{ total_comments }}</span>
+                </strong>
+                {% endwith %}
             </div>
         </div>
     </div>
