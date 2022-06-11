@@ -133,6 +133,11 @@ Three custom models were used for the website, Review, Genre and Comment. Two bu
 
 ![DatabaseSchema](./static/images/database_schema.png)
 
+## The Skeleton Plane
+
+Wireframes:
+All wireframes for the project can be found [here](./assets/wireframes/)
+
 
 
 
