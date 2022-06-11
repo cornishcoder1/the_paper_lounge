@@ -63,6 +63,10 @@ header {
     color: #ffff;
 }
 
+#container-reviews {
+    margin-top: 50px;
+}
+
 /* Image sizing for card images */
 
 .review-image {
