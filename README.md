@@ -216,59 +216,106 @@ The footer is kept simple with minimal styling, although the icons do change col
 
 - Review detail - Once opened the review detail page shows the image as a masthead with the book title and reviewer name on top. It then shows the body of the review, star rating and number of likes. Approved comments are then listed below, with the comment form showing for logged in users. Users receive feedback in the form of a pop-up message when a comment has been successfully submitted for approval. The body field is mandatory and must be completed before the user can submit the comment form. 
 
-# Features Left to Implement
+## Features Left to Implement
 
+- Implement more features of AllAuth, particularly around changing and resetting passwords. 
+- Add a Forum app so that users could have better discussion and engagement with each other. Currently they are only able to comment on each others reviews which limits interaction and engagement.
+- Allow users to add new genres themselves, rather than only the admin being able to do this. This was out of scope for the current project. 
+***
 
+# Testing
 
+- All testing documentation can all be found [here](/TESTS.md)
+***
 
 # Bugs
 
 ## Fixed
-- Initial deployment to Heroku failed
+- Initial deployment to Heroku failed.
     - Upon opening the app in Heroku for the first time after initial deployment, an Application Error was presented. By using the 'heroku logs --tail' command in the terminal, I was able to determine that I had written my application name in the wrong format in Line 1 of the Procfile (I had included underscores in the wsgi file name). I corrected the filename to 'thepaperlounge.wsgi' and upon re-opening the app after commiting the change, the Django successful install page was displayed. 
 
-- Ability to like a review failed
+- Ability to like a review failed.
     - Upon attempting to like a review, I was taken to an error page which stated that 'reverse' was an undefined variable. Upon checking the views.py file, I realised that I had forgotten to import the 'reverse' django shortcut. Once I had added the import to the top of the file (line 1), I was able to like a review without error. 
 
-- add_review.html not found (404 error)
+- add_review.html not found (404 error).
     - When defining the URL path for this page in blog.urls.py and attempting to render, I was presented with a 404 error. This was because ‘add-review’ was being treated as the slug expected by the review_detail view. I changed the order of the paths, placing the 'add_review' path above the 'ReviewDetail' path in the URL patterns list. This fixed the problem and allowed the page to render.
 
-- Add Review button not displaying on small screens horizontally
+- Add Review button not displaying on small screens horizontally.
+    - During responsiveness testing, I noticed that the Add Review button was disappearing on small screens, when viewed horizontally. To fix this I added a top margin of 50px to allow more room for the button. The button does slip down from the hero image, but it is functional and still looks presentable. 
 
-- Like icon overlapping with Comments icon on small screens
+- Like icon overlapping with Comments icon on small screens.
+    - On small screens the two icons were overlapping, so to remedy this I moved the total number of comments icon and number to the bottom of the comments container. This is more visually appealling and fixes the issue of overlap. 
    
 
 ## Unfixed
 
+No notable bugs have been found to remain and the website functions as expected. 
+***
 
+# Technologies Used
 
-# Technologies used
+## Modules used for the development of this project: 
+    - asgiref==3.5.1
+    - cloudinary==1.29.0
+    - dj-database-url==0.5.0
+    - dj3-cloudinary-storage==0.0.6
+    - Django==3.2.13
+    - django-allauth==0.50.0
+    - django-contact-us==1.0.0
+    - django-crispy-forms==1.14.0
+    - django-summernote==0.8.20.0
+    - gunicorn==20.1.0
+    - oauthlib==3.2.0
+    - psycopg2==2.9.3
+    - PyJWT==2.4.0
+    - python3-openid==3.2.0
+    - pytz==2022.1
+    - requests-oauthlib==1.3.1
+    - sqlparse==0.4.2
 
-## Main Languages Used 
+## Languages
+- HTML - required to render templates
+- CSS - required for custom styling
+- JavaScript - required for automatic dismissal of pop-up messages
+- Python - The base language of the Django Framework
 
-## Additional Languages Used
+## Libraries
+- Bootstrap - used for various components including:
+    - Navbar - navigation bars
+    - Buttons - all buttons throughout the site
+    - Cards - review cards
+    - Modal - delete modal
+    - Grid/Containers/Columns/Rows - to configure the layout of elements
 
-## Frameworks, Libraries and Programs Used
+## Frameworks
+- Django - Full Stack Framework
 
+## Platforms
+- Cloudinary - Storage of static files for deployed site 
+- Github - Repository with Git version control
+- GitPod - IDE used for developement 
+- Heroku - Platform for final deployed version of site
 
+## Services
+- [Coolors.co](https://coolors.co/) - Presentation of colors for README
+- [DrawSQLapp](https://drawsql.app/) - Development of database schema
+- [Favicon](https://favicon.io/) - Generation of favicon
+- [FontAwesome](https://fontawesome.com/) - Icons used for UX purposes
+- [GoogleFonts](https://fonts.google.com/) - 'Inconsolata' font used throughout site
+- [LucidChart](https://www.lucidchart.com/) - Development of flowchart
+- [Mycolor.space](https://mycolor.space/) - Generation of color palettes
 
-# Testing
-
-## User Story Testing
-
-## Manual Testing 
-
-## Automated Testing
-- Validator
-- Browser 
-
-## User Testing
-
-
+## Resources
+- The Code Institute's Codestar Blog walkthrough project was used in the beginning stages of the project to help get me started. I then customised and added further functionality as my confidence and knowledge grew. 
+- Django documentation was relied on for additional functionality (e.g the dropdown button and different navigation bars). 
+- W3C Schools and Stack Overflow for general enquiries relating to HTML and CSS. 
+- Youtube videos - particularly those from Very Academy and Codemy.com. 
+***
 
 # Deployment
 
 ## Initial Deployment
+
 In Gitpod: 
 1. Create a new repository from the CI full template 
 2. To install Django, supporting libraries and dependencies, run the following commands in the terminal: 
@@ -342,7 +389,6 @@ In Gitpod:
     - 'git push heroku main' 
 9. Open app in Heroku once deployment is completed, to insure installation was successful 
     
-
 ## Final Deployment
 In Gitpod:
 1. Ensure all files are up to date.
@@ -354,7 +400,7 @@ In Heroku:
 1. Go to 'Settings' tab and reveal config vars. Remove COLLECT_STATIC environment variable. 
 2. Go to 'Deploy' tab and scroll down to 'Deploy Branch' (ensure github repo is connected). Run deployment. 
 3. Wait for confirmation that application has deployed. 
-
+***
 
 # References 
 
@@ -362,19 +408,18 @@ In Heroku:
 1. Stack Overflow - <a href="https://stackoverflow.com/questions/38963193/auto-populate-slug-field-django"> how to auto-populate the Review model slugfield.</a>
 2. Stack Overflow - <a href="https://stackoverflow.com/questions/7682804/django-model-forms-setting-a-required-field"> how to set a required field on a Django model form.</a>
 3. Very Academy - <a href="https://www.youtube.com/watch?v=S9-Bt1JgRjQ"> Learn Django - Building a Simple Blog Categories Feature</a>
+***
 
-## Content
-
+# Credits
 
 ## Media
-1. Bookshelf icon by <a href="https://www.freepik.com" title="Freepik">Freepik</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+- Bookshelf icon by <a href="https://www.freepik.com" title="Freepik">Freepik</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
-2. Placeholder image by <a href="https://www.pexels.com/@caio/" title="Caio">Caio</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+- Placeholder image by <a href="https://www.pexels.com/@caio/" title="Caio">Caio</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
 
-3. About page image by <a href="https://www.pexels.com/@emrecan/" title="Emre Can Acer">Emre Can Acer</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+- About page image by <a href="https://www.pexels.com/@emrecan/" title="Emre Can Acer">Emre Can Acer</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
 
-
-# Acknowledgements
+## Acknowledgements
 - Ed B_alum for helping me fix a 404 error. 
 - Franciska from Tutor Support for helping me get my navbar drop down working. 
 - Ed from Tutor Support for your patience and help in error handing non-existent genre pages. 
