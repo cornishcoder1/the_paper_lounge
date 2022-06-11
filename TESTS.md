@@ -62,7 +62,9 @@ Result:
 
 ## Lighthouse
 
+Lighthouse scored the site highly on Accessibility, Best Practices and SEO. However Performance was lower than desired. This was apparently because of images not being sized properly. I attempted to add sizing attributes to the review images within custom CSS but this did not seem to address the problem. This is something I would look into resolving in future sprints. 
 
+![Lighthouse results](./static/validation_test_screenshots/lighthouse_desktop.png)
 
 
 ## W3C Markup
