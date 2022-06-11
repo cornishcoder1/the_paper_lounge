@@ -70,6 +70,10 @@
 
 - add_review.html not found (404 error)
     - When defining the URL path for this page in blog.urls.py and attempting to render, I was presented with a 404 error. This was because ‘add-review’ was being treated as the slug expected by the review_detail view. I changed the order of the paths, placing the 'add_review' path above the 'ReviewDetail' path in the URL patterns list. This fixed the problem and allowed the page to render.
+
+- Add Review button not displaying on small screens horizontally
+
+- Like icon overlapping with Comments icon on small screens
    
 
 ## Unfixed

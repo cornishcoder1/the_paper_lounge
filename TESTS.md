@@ -10,7 +10,7 @@
 - [User Story Testing](#user-story-testing)
     - [Admin](#admin)
     - [Site User](#site-user)
-- [Responsive Testing](#Responsive-Testing)
+- [Responsive Testing](#responsive-testing)
 ***
 
 # Unit Testing
@@ -426,7 +426,7 @@ The website has been tested using the following browsers:
 - Google Chrome
 - Microsoft Edge
 - Mozilla Firefox
-- Safari HERE
+- Safari
 
 The website has been tested on the following devices: 
 
@@ -436,11 +436,15 @@ The website has been tested on the following devices:
 
 The following emulated devices have been tested in Dev Tools:
 
-- iPhone 6/7/8
-- iPhone 6/7/8 Plus
-- iPhone X
-- iPad
-- iPad Pro
+- iPhone XR
+- iPhone 12 Pro
+- Pixel 5
+- Samsung Galaxy S20 Ultra
+- iPad Air
+- iPad Mini
+- Galaxy A51/71 
+
+All functionality worked as expected for every device and web browser. The only issue encountered was that the 'Add Review' button disappeared on small screens when viewed horizontally. This was fixed by adding a top margin to the container below the header (see fixed bugs section of README for more information). 
 
 
 
