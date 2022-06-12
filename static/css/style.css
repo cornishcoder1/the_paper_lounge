@@ -16,6 +16,10 @@ body {
     font-size: larger;
 }
 
+.page-link {
+    color: black;
+}
+
 /* Homepage header and hero image*/
 
 header {
