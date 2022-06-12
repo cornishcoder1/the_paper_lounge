@@ -100,7 +100,7 @@ The target audience for the website is:
 - I can view messages submitted via the contact form so that I can communicate with site users.
 - I can remove users so that they will no longer be able to post unsuitable content.
 
-## Agile methodology
+## Agile Methodology
 
 The development of this project was managed and implemented using GitHub Projects Kanban Board:
 <a href="https://github.com/cornishcoder1/the_paper_lounge/projects/1" target="_blank" rel="noopener" aria-label="Link to GitHub Projects">The Paper Lounge - User Stories</a>
@@ -425,7 +425,13 @@ In Heroku:
 
 - Train image by <a href="https://www.pexels.com/@gabriela-palai-129458/" title="Gabriela Palai">Gabriela Palai</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
 
+- Alice in Wonderland image by <a href="https://www.pexels.com/@moldyvintagephoto/" title="Moldy Vintages">Moldy Vintages</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
+- Lakehouse image by <a href="https://www.pexels.com/@moniaes/" title="Monia Sciubilecka">Monia Sciubilecka</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
 - About page image by <a href="https://www.pexels.com/@emrecan/" title="Emre Can Acer">Emre Can Acer</a> on <a href="https://www.pexels.com/" title="Pexels">Pexels</a>
+
+- Sample review text from book blurbs and Wikipedia. 
 
 - All other images currently present on the site belong to myself. 
 
