@@ -58,8 +58,8 @@ This application has been produced for Porfolio Project 4, as part of the Code I
 The main aim of the website is to provide an online community for book lovers, where they can find reviews of books they have not yet read to help inform their reading choices, or post reviews of their own to share experiences and opinions of books they have read. 
 
 General users can:
-- Browse and read existing reviews
-- Send messages to the admin via the contact form
+- Browse and read existing reviews.
+- Send messages to the admin via the contact form.
 
 In addition, registered users can:
 - Create, update and delete their own reviews.
@@ -69,10 +69,10 @@ The admin can:
 - Access the admin panel from the navigation bar when logged in. 
 - Create, update and delete their own reviews from the main site, or the admin panel. 
 - Approve and publish reviews and comments from users via the admin panel. 
-- Create, update and delete Genres via the admin panel. 
-- Manage users and their content via the admin panel. 
+- Create, update and delete genres via the admin panel. 
+- Manage users and associated content via the admin panel. 
 
-The target audience for the website is:
+The target audience for this website is:
 - People who want to share their thoughts and opinions on books they have read. 
 - People who are looking generally for book recomendations. 
 - People who want to find new books to read of a specific genre. 
@@ -108,7 +108,7 @@ The target audience for the website is:
 
 ## Agile Methodology
 
-The development of this project was managed and implemented using GitHub Projects Kanban Board:
+The development of this project was managed and implemented using GitHub Projects Kanban Board. Available here:
 <a href="https://github.com/cornishcoder1/the_paper_lounge/projects/1" target="_blank" rel="noopener" aria-label="Link to GitHub Projects">The Paper Lounge - User Stories</a>
 
 <br>
@@ -161,7 +161,7 @@ I wanted the main colours of the site to be calming and neutral, hence the use o
 
 ## Typography 
 
-The font used throughout the website is 'Inconsolata'. What I liked about this font was it's 'typewriter' look, which I felt was a good style fit for a book review website. 
+The font used throughout the website is 'Inconsolata' from <a href="https://fonts.google.com/specimen/Inconsolata#standard-styles" title="Google Fonts">Google Fonts</a>. What I liked about this font was it's 'typewriter' look, which I felt was a good style fit for a book review website. 
 
 ## Imagery
 
