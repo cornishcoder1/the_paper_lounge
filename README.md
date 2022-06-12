@@ -166,9 +166,11 @@ The font used throughout the website is 'Inconsolata' from <a href="https://font
 ## Imagery
 
 For the homepage hero image I used an image of books on a shelf. This helps the user identify quickly what the website is about. I darkened the image so that the white text on top stood out and was more visible. 
+
 ![HeroImage](./static/images/books_opaque.jpg)
 
 For the placeholder image (if a user does not upload their own image when submitting a review), I used an image of an open book. The image is stylish and neutral in colour, which is ideal for a placeholder which may appear multiple times on a page. I also used this image as the masthead for the genre pages. 
+
 ![PlaceholderImage](./static/images/placeholder.jpg)
 
 All other images present on the site will be chosen by users. The admin can change or remove images that are inappropriate, before approving and publishing reviews to the main site. 
@@ -206,7 +208,7 @@ The footer is kept simple with minimal styling, although the icons do change col
 
 ## Other Features
 
-- Home page - This has a hero image, with a title, description of the site and the 'Browse Reviews by Genre' dropdown button. It also features register and login buttons. Once a user is registered and logged in, these buttons are replaced by the 'Add Review' button. Below this, all reviews will show, ordered by date published (newest first).
+- Home page - This has a hero image, with a title, description of the site and the 'Browse Reviews by Genre' dropdown button. It also features register and login buttons. Once a user is registered and logged in, these buttons are replaced by the 'Add Review' button. Below this, all reviews will show ordered by date published (newest first).
 
 - About page - This page is available to all users, and gives a brief description of the site and community rules. 
 
@@ -214,7 +216,7 @@ The footer is kept simple with minimal styling, although the icons do change col
 
 - Contact Us - All users can submit a contact from which goes to the admin. This allows them to report issues, give feedback or suggest new features. Users receive feedback in the form of a pop-up message when a form is sent successfully. All fields are marked as mandatory and must be completed before the user can submit the form. 
 
-- Browse Reviews by Genre - The dropdown button allows users to navigate to genre specific pages, and view reviews submitted under that genre only. If no reviews are listed on a particular genre page, this is communicated to the user in the main body of the page. Also, if a user tries to access a genre that does not exist (by typing an invalid slug into the URL, they will be informed in the main body of the resulting page). 
+- Browse Reviews by Genre - The dropdown button allows users to navigate to genre specific pages, and view reviews submitted under that genre only. If no reviews are listed on a particular genre page, this is communicated to the user in the main body of the page. Also, if a user tries to access a genre that does not exist (by typing an invalid slug into the URL), they will be informed in the main body of the resulting page. 
 
 - Add/Edit Review - This form allows users to write and submit their own reviews, apply genres and ratings, and upload an image to accompany the review. If an image is not uploaded, then the placeholder image will appear on that review when published. All fields are marked as mandatory and must be completed before the user can submit the form. 
 
@@ -247,7 +249,7 @@ The footer is kept simple with minimal styling, although the icons do change col
     - When defining the URL path for this page in blog.urls.py and attempting to render, I was presented with a 404 error. This was because ‘add-review’ was being treated as the slug expected by the review_detail view. I changed the order of the paths, placing the 'add_review' path above the 'ReviewDetail' path in the URL patterns list. This fixed the problem and allowed the page to render.
 
 - Add Review button not displaying on small screens horizontally.
-    - During responsiveness testing, I noticed that the Add Review button was disappearing on small screens, when viewed horizontally. To fix this I added a top margin of 50px to allow more room for the button. The button does slip down from the hero image, but it is functional and still looks presentable. 
+    - During responsiveness testing, I noticed that the Add Review button was disappearing on small screens, when viewed horizontally. To fix this I added a top margin of 50px to the container below to allow more room for the button. The button does slip down from the hero image, but it is functional and still looks presentable. 
 
 - Like icon overlapping with Comments icon on small screens.
     - On small screens the two icons were overlapping, so to remedy this I moved the total number of comments icon and number to the bottom of the comments container. This is more visually appealling and fixes the issue of overlap. 
@@ -299,7 +301,7 @@ No notable bugs have been found to remain and the website functions as expected.
 ## Platforms
 - Cloudinary - Storage of static files for deployed site 
 - Github - Repository with Git version control
-- GitPod - IDE used for developement 
+- GitPod - IDE used for development 
 - Heroku - Platform for final deployed version of site
 
 ## Services
@@ -313,7 +315,7 @@ No notable bugs have been found to remain and the website functions as expected.
 
 ## Resources
 - The Code Institute's Codestar Blog walkthrough project was used in the beginning stages of the project to help get me started. I then customised and added further functionality as my confidence and knowledge grew. 
-- Django documentation was relied on for additional functionality (e.g the dropdown button and different navigation bars). 
+- Django documentation was relied on for additional functionality (e.g. the dropdown button and different navigation bars). 
 - W3C Schools and Stack Overflow for general enquiries relating to HTML and CSS. 
 - Youtube videos - particularly those from Very Academy and Codemy.com. 
 ***
@@ -449,3 +451,5 @@ In Heroku:
 - Ed from Tutor Support for your patience and help in error handing non-existent genre pages. 
 
 - Lisa Tinmurth and John from Tutor Support for helping me with my delete modal code. 
+
+- The CI Slack Community for an invaluable archive of help! 
