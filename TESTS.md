@@ -5,7 +5,7 @@
 - [Validator Testing](#validator-testing)
     - [Lighthouse](#lighthouse)
     - [W3C Markup](#w3c-markup)
-    - [W3C-CSS](#w3c-css) 
+    - [W3C CSS](#w3c-css) 
     - [PEP8](#pep8)
 - [User Story Testing](#user-story-testing)
     - [Admin](#admin)
@@ -276,7 +276,7 @@ Within the admin panel, the admin can select Users:
 Here, the admin can select users to delete: 
 ![User Story testing](./static/user_story_test_screenshots/manage_users_admin_2_ustesting.png)
 
-The admin is then informed that all objects related to that user will also be deleted, and they are asked to confirm they are sure they want to delete that user:
+The admin is then informed that all objects related to that user will also be deleted, and they are asked to confirm that they want proceed:
 ![User Story testing](./static/user_story_test_screenshots/manage_users_admin_3_ustesting.png)
 
 
@@ -379,7 +379,7 @@ Logged in users can click into their reviews and view any comments and number of
 
 - As a site user I can view and click on different genre categories so that I can find reviews relevant to my specific reading interests.
 
-A dropdown button is present in the header of the home page, where users can select from a pre-defined list of genres. (When submitting a review, users are asked to select a genre so that it is categorised effectively):
+A dropdown button is present in the header of the home page, where users can select from a pre-defined list of genres. (When submitting a review, users are asked to select a genre so that it is categorised appropriately):
 ![User Story testing](./static/user_story_test_screenshots/browse_genres_user_ustesting.png)
 
 Upon selecting a genre, the user is taken to that specific genre page, where all reviews categorised with that genre are listed: 
