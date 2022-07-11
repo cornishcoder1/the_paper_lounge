@@ -9,9 +9,10 @@
 {% endblock %}
 
 {% block content %}
+{% if user.id == review.creator.id %}
 <div class="card-body">
     <h4 class="text-center">Edit your review here</h4>
-    {% if user.is_authenticated %}
+    
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="row">
@@ -23,9 +24,9 @@
     {% else %}
     <div class="container">
         <div class="row">
-            <div class="col mt-3 mb-5 text-light text-center">
-                <h1 class="mb-5">You are not logged in!</h1>
-                <p>Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> an account to edit a recipe.</p>
+            <div class="col mt-3 mb-5 text-dark text-center">
+                <h1 class="mb-5">You are not authorised to view this page</h1>
+                <p>Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> an account.</p>
             </div>
         </div>
     </div>
