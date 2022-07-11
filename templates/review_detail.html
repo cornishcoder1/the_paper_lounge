@@ -28,14 +28,12 @@
 <!-- Edit Button, Delete Button and Delete Modal  -->
 <div id="modifyReview">
     <div class="col mt-2 mb-3 text-center">
-        
         <!--Edit Button-->
         <a href="{% url 'edit_review' review.slug %}" class="edit"><button class="btn btn-success btn-md"
                 value="{{ review.slug }}" type="button">Edit</button></a>
         <!--Delete Button-->
         <button class="btn btn-danger btn-md mx4" data-bs-toggle="modal"
         data-bs-target="#deleteModal{{ review.id }}">Delete</button>
-        
     </div>        
     <!--Modal-->
     <div class="modal fade" id="deleteModal{{ review.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">

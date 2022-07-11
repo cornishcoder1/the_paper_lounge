@@ -12,7 +12,6 @@
 {% if user.id == review.creator.id %}
 <div class="card-body">
     <h4 class="text-center">Edit your review here</h4>
-    
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="row">
