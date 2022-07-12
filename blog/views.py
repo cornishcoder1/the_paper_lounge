@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Review, Genre
 from .forms import CommentForm, ReviewForm
 
@@ -11,6 +12,7 @@ def about(request):
     return render(request, "about.html")
 
 
+@login_required()
 def add_review(request):
     """renders add review form"""
     submitted = False
@@ -33,6 +35,7 @@ def add_review(request):
         {'review_form': review_form, 'submitted': submitted})
 
 
+@login_required()
 def edit_review(request, slug):
     """Review update/edit view"""
     review = get_object_or_404(Review, slug=slug)
@@ -54,6 +57,7 @@ def edit_review(request, slug):
     return render(request, "edit_review.html", context)
 
 
+@login_required()
 def delete_review(request, slug):
     """Delete review"""
     review = get_object_or_404(Review, slug=slug)
