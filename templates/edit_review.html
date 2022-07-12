@@ -20,15 +20,15 @@
             <br>
             <input type="submit" value="submit" class="btn btn-secondary">
         </form>
-    {% else %}
-    <div class="container">
-        <div class="row">
-            <div class="col mt-3 mb-5 text-dark text-center">
-                <h1 class="mb-5">You are not authorised to view this page</h1>
-                <p>Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> an account.</p>
-            </div>
+</div>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col mt-3 mb-5 text-dark text-center">
+            <h1 class="mb-5">You are not authorised to view this page</h1>
+            <p>Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> an account.</p>
         </div>
     </div>
-    {% endif %}
 </div>
+{% endif %}
 {% endblock %}
