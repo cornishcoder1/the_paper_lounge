@@ -28,4 +28,6 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
-admin.site.register(Genre)
+@admin.register(Genre)
+class GenreAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('genre_slug',)}
