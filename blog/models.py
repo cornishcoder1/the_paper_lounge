@@ -10,6 +10,7 @@ RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
 class Genre(models.Model):
     """Genre model"""
     name = models.CharField(max_length=150)
+    genre_slug = models.SlugField(max_length=150, unique=True)
 
     class Meta:
         """meta class"""
