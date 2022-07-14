@@ -30,4 +30,4 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('genre_slug',)}
+    prepopulated_fields = {'genre_slug': ('name',)}
