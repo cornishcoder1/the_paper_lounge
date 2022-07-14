@@ -7,7 +7,7 @@
         </button>
         <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton">
             {% for genre in genre_list %}
-            <a class="dropdown-item" href="/genre/{{genre.name}}">
+            <a class="dropdown-item" href="{% url 'genre' genre.genre_slug %}">
             {{ genre.name|title }}
             </a>
             {% endfor %}
