@@ -67,7 +67,7 @@ genlist
                 </div>
             </div>
             {% else %}
-            <h3 id="no-reviews">No reviews are currently published</h3>
+            <h3 id="no-reviews">No {{ genlist.gen }} reviews are currently published</h3>
             {% endif %}
             {% if is_paginated %}
             <nav aria-label="Page navigation">
@@ -82,7 +82,7 @@ genlist
             </nav>
             {% endif %}
         {% else %}
-        <h3>No reviews are currently published</h3>
+        <h3>This page does not exist</h3>
         {% endif %}
     </div>
 </div>
