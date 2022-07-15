@@ -117,6 +117,8 @@ Users can now only access a review's edit page via it's URL if they are the crea
 
 ![Defensive validation](./static/validation_test_screenshots_resubmission/edit_page_defensive.png)
 
+If a non-logged in guest attempts to access an edit page, they are prompted to log in. If upon login they are identified as the creator of that review, they are taken to the edit page. Otherwise, they are taken to the page screenshot above.
+
 This was achieved by implementing an if/else statement in template 'edit_review.html' (lines 12-33), and adding a login_required decorator to the 'edit_review' view in views.py.
 
 ## Delete Modal
