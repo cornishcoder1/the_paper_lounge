@@ -17,6 +17,7 @@
     3. [Other Features](#other-features)
     4. [Features Left to Implement](#features-left-to-implement)
 9. [Testing](#testing)
+    1. [Resubmission Testing](#resubmission-testing)
 10. [Bugs](#bugs)
     1. [Fixed](#fixed)
     2. [Unfixed](#unfixed)
@@ -233,8 +234,12 @@ The footer is kept simple with minimal styling, although the icons do change col
 
 # Testing
 
-- All testing documentation can all be found [here](/TESTS.md)
+- All testing documentation can be found [here](/TESTS.md)
 ***
+
+## Resubmission Testing
+
+- All resubmission testing documents can be found [here](/TESTS_RESUBMISSION.md)
 
 # Bugs
 
