@@ -46,7 +46,7 @@ Browse through the genres to find reviews specific to your interests, or share y
 
 The Paper Lounge has been built using the Django Framework in Python, JavaScript, HTML and CSS. It provides user authentication and full CRUD functionality. 
 
-<a href="https://the-paper-lounge.herokuapp.com/" target="_blank" rel="noopener" aria-label="Link to open deployed site">Link to deployed site</a>
+<a href="https://the-paper-lounge.onrender.com/" target="_blank" rel="noopener" aria-label="Link to open deployed site">Link to deployed site</a>
 
 ![Am I Responsive](./static/images/am_i_responsive.png)
 ***
