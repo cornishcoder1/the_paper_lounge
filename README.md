@@ -31,6 +31,7 @@
 12. [Deployment](#deployment)
      1. [Initial Deployment](#initial-deployment)
      2. [Final Deployment](#final-deployment)
+     3. [Deployment Update Nov 2022](#deployment-update-nov-2022)
 13. [References](#references)
     1. [Code](#code)
 14. [Credits](#credits)
@@ -307,7 +308,9 @@ No notable bugs have been found to remain and the website functions as expected.
 - Cloudinary - Storage of static files for deployed site 
 - Github - Repository with Git version control
 - GitPod - IDE used for development 
-- Heroku - Platform for final deployed version of site
+- Heroku - Platform for final deployed version of site (until November 2022)
+- ElephantSQL - Hosting of PostgreSQL database (from November 2022)
+- Render - Deployment of frontend (from November 2022)
 
 ## Services
 - [Coolors.co](https://coolors.co/) - Presentation of colors for README
@@ -414,6 +417,12 @@ In Heroku:
 2. Go to 'Deploy' tab and scroll down to 'Deploy Branch' (ensure github repo is connected). Run deployment. 
 3. Wait for confirmation that application has deployed. 
 ***
+
+# Deployment (Update, Nov 2022)
+
+As of November 2022, Heroku ceased to provide a free service. Therefore, to continuing hosting <a href="https://the-paper-lounge.onrender.com/">this project</a> without charge I transfered it to free services <a href="https://render.com/">Render</a> and <a href="https://www.elephantsql.com/">ElephantSQL</a>.
+
+The steps followed to migrate this project from Heroku to Render and ElephantSQL can be found <a href="https://code-institute-students.github.io/deployment-docs/30-pp4/">here</a>.
 
 # References 
 
