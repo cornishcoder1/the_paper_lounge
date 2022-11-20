@@ -420,7 +420,7 @@ In Heroku:
 
 # Deployment (Update, Nov 2022)
 
-As of November 2022, Heroku ceased to provide a free service. Therefore, to continuing hosting <a href="https://the-paper-lounge.onrender.com/">this project</a> without charge I transfered it to free services <a href="https://render.com/">Render</a> and <a href="https://www.elephantsql.com/">ElephantSQL</a>.
+As of November 2022, Heroku ceased to provide a free service. Therefore, to continuing hosting <a href="https://the-paper-lounge.onrender.com/">this project</a> without charge I transferred it to free services <a href="https://render.com/">Render</a> and <a href="https://www.elephantsql.com/">ElephantSQL</a>.
 
 The steps followed to migrate this project from Heroku to Render and ElephantSQL can be found <a href="https://code-institute-students.github.io/deployment-docs/30-pp4/">here</a>.
 
