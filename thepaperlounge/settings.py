@@ -33,7 +33,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['the-paper-lounge.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['the-paper-lounge.herokuapp.com', 'thepaperlounge-production.up.railway.app', 'localhost']
 
 # Add Render.com URL to allowed hosts
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
