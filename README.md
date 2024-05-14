@@ -32,6 +32,7 @@
      1. [Initial Deployment](#initial-deployment)
      2. [Final Deployment](#final-deployment)
      3. [Deployment Update Nov 2022](#deployment-update-nov-2022)
+     4. [Deployment Update May 2024](#deployment-update-may-2024)
 13. [References](#references)
     1. [Code](#code)
 14. [Credits](#credits)
@@ -423,6 +424,10 @@ In Heroku:
 As of November 2022, Heroku ceased to provide a free service. Therefore, to continuing hosting <a href="https://the-paper-lounge.onrender.com/">this project</a> without charge I transferred it to free services <a href="https://render.com/">Render</a> and <a href="https://www.elephantsql.com/">ElephantSQL</a>.
 
 The steps followed to migrate this project from Heroku to Render and ElephantSQL can be found <a href="https://code-institute-students.github.io/deployment-docs/30-pp4/">here</a>.
+
+# Deployment (Update, May 2024)
+
+As of 2024, ElephantSQL are beginning a wind down and eventual close of their free database hosting service. Therefore, to continuing hosting <a href="https://thepaperlounge-production.up.railway.app/">this project</a> without charge I have transferred it to <a href="https://railway.app/">Railway</a> for the frontend hosting and <a href="https://neon.tech/">Neon</a> for the database. Using these services combined has improved initial loading time. 
 
 # References 
 
